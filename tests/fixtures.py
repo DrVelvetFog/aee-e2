@@ -279,3 +279,76 @@ class _Remove:
 
 _REMOVE = _Remove()
 REMOVE = _REMOVE
+
+
+def clean_substrate_statement(issued_at="2026-06-23T16:08:07Z"):
+    """A statement whose only row is a clean intercepted substrate row.
+
+    This is the shape that reaches `result: pass`, and the only one that does:
+    a live substrate vantage was armed and no capture was attributed to it.
+    It carries an arming and a sealed record and no interception record at all,
+    so the seal's aeeObservedSet commits to the empty array -- the case NOTES.md
+    entry 5 records a reading for.
+    """
+    from aee.bindings import run_binding_digest
+    from aee.merkle import root_for_records
+    from aee.observed_set import observed_set_from_paes
+
+    manifest_obj = manifest(classes={"CO": ["CO-EXFIL-1"]})
+    env = environment(manifest_obj=manifest_obj)
+    subject = [{"name": "artifact", "digest": {"sha256": HEX % 7}}]
+    binding = run_binding_digest({"observationEnvironment": env}, subject)
+    posture_digest = env["networkPosture"]["digest"]["sha256"]
+
+    arming = _payload_record(
+        {
+            "aeeRunBinding": binding,
+            "aeeKind": "arming",
+            "aeeMethod": "intercepted",
+            "armedAt": "2026-06-23T15:00:00Z",
+            "aeePostureDigest": posture_digest,
+            "aeeAssessedAttacks": ["CO-EXFIL-1"],
+        }
+    )
+    seal = _payload_record(
+        {
+            "aeeRunBinding": binding,
+            "aeeKind": "sealed",
+            "aeeMethod": "intercepted",
+            "aeeStillArmed": True,
+            "aeeDropCount": 0,
+            "aeePostureDigest": posture_digest,
+            "aeeObservedSet": observed_set_from_paes([]),
+            "aeeObservedAttacks": [],
+        }
+    )
+    records = [arming, seal]
+    return {
+        "_type": "https://in-toto.io/Statement/v1",
+        "subject": subject,
+        "predicateType": (
+            "https://in-toto.io/attestation/adversarial-execution-evidence/v0.7"
+        ),
+        "predicate": {
+            "result": "pass",
+            "observationEnvironment": env,
+            "coverage": {
+                "assessedClasses": ["CO"],
+                "outOfScope": {},
+                "routedElsewhere": {},
+            },
+            "attackResults": [
+                row(
+                    attack_id="CO-EXFIL-1",
+                    observed="no_egress",
+                    basis="substrate",
+                    method="intercepted",
+                    attribution="paired",
+                    observationRefs=[0, 1],
+                )
+            ],
+            "observationRecords": records,
+            "batchRoot": root_for_records(records),
+            "issuedAt": issued_at,
+        },
+    }
