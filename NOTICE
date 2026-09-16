@@ -1,0 +1,24 @@
+aee-e2 — independent E2 validator for Adversarial Execution Evidence v0.7
+
+Copyright 2026 Tony Jagodka
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This repository vendors third-party material, unmodified, under spec/:
+
+  spec/adversarial-execution-evidence.head-25ac8581.md
+  spec/adversarial-execution-evidence.corpus-0dbe10bc.md
+      The Adversarial Execution Evidence predicate specification, at two
+      revisions, from astrogilda/attestation (a fork of in-toto/attestation).
+      Copyright 2021 in-toto Developers. Apache License, Version 2.0.
+      Vendored as bytes, with their SHA-256 digests recorded in
+      spec/SPEC-PIN.json, because a commit a pin names can be rewritten out of
+      a plain clone's reach and the bytes cannot.
+
+  spec/CORPUS-DIGESTS.v0.10.1.txt
+      The signed corpus digest manifest from
+      astrogilda/agent-evidence-vectors at tag v0.10.1.
+      Apache License, Version 2.0.
+
+The conformance corpus itself is not vendored. It is cloned at the pinned tag
+and verified before use; see spec/CORPUS-PIN.json and reports/PRE-RUN.md.
