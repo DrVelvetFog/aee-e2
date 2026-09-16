@@ -18,6 +18,13 @@ This repository is committed in the order agreed on the PR before any code was w
 Steps 1 and 2 are this commit. Step 3 is committed before any directed fix is made, so the first
 run is reproducible from this tree whatever the score turns out to be.
 
+## Reading notes
+
+`NOTES.md` records places where the text underdetermines a reading, with the
+reading taken, the reason, and the alternative left on the table. Entries are
+written as they arise and before the first run, so that a divergence traced to
+one of them can be told apart from a mistake.
+
 ## Independence
 
 Not consulted, and not to be consulted before step 3 is committed: the Rust `aee-checker`, the
