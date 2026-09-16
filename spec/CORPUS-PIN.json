@@ -1,0 +1,30 @@
+{
+  "commit": "6c2fa6cc75",
+  "corpusDigest": "8b035678def9e5ac00ba761b8c640e4412c57163134afb9d2c1a90f49d573a52",
+  "digestLine": "8b035678def9e5ac00ba761b8c640e4412c57163134afb9d2c1a90f49d573a52  vectors/MANIFEST.json  adversarial-execution-evidence-conformance  vectors=272  suiteRevision=28",
+  "expectedCounts": {
+    "accept": 61,
+    "indeterminate": 2,
+    "reject": 209
+  },
+  "formerName": "astrogilda/aee-conformance",
+  "manifest": "vectors/MANIFEST.json",
+  "published": "2026-09-12T01:09:01Z",
+  "repo": "astrogilda/agent-evidence-vectors",
+  "scoredSurface": {
+    "measured": [
+      "codes"
+    ],
+    "normative": [
+      "verdict",
+      "result"
+    ],
+    "note": "Per MANIFEST.json comparisonSurface: codes are this rail's own vocabulary; reason parity is reported as its own figure, not scored."
+  },
+  "suite": "adversarial-execution-evidence-conformance",
+  "suiteRevision": 28,
+  "tag": "v0.10.1",
+  "vectors": 272,
+  "vendoredDigestFile": "spec/CORPUS-DIGESTS.v0.10.1.txt",
+  "vendoredDigestFileSha256": "c6b9ee74f5d47131d3830e14480ac721f071736205a725b88d2cadad92524b1c"
+}

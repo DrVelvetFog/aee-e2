@@ -1,0 +1,36 @@
+{
+  "corpusPinned": {
+    "bytes": 147709,
+    "commit": "0dbe10bcc959b63dc42370a5db09812c9476f59a",
+    "declaredBy": "vectors/MANIFEST.json specUpstreamCommit + specDigest at agent-evidence-vectors v0.10.1",
+    "path": "spec/predicates/adversarial-execution-evidence.md",
+    "repo": "astrogilda/attestation",
+    "sha256": "759d2383e5da36fa509dc335e6159a20b87641b25ebbadcf1676c55d75ffd8b0",
+    "vendored": "spec/adversarial-execution-evidence.corpus-0dbe10bc.md"
+  },
+  "drift": {
+    "addedLines": 65,
+    "hunks": [
+      "644a645,676",
+      "755a788,814",
+      "1333c1392,1393",
+      "1704,1706c1764,1767"
+    ],
+    "normative": [
+      "1333c1392,1393"
+    ],
+    "removedLines": 4
+  },
+  "head": {
+    "bytes": 152102,
+    "commit": "25ac8581fbc9398a3add2577c65e2d09163e3db3",
+    "path": "spec/predicates/adversarial-execution-evidence.md",
+    "ref": "predicate/adversarial-execution-evidence",
+    "repo": "astrogilda/attestation",
+    "sha256": "2b7f3bc08123cbe1981d287cf20193858ae5ea6d55ca067e06363a1e71a573d7",
+    "upstreamPr": "in-toto/attestation#570",
+    "vendored": "spec/adversarial-execution-evidence.head-25ac8581.md"
+  },
+  "implementedAgainst": "head",
+  "note": "Vendored spec bytes. The commit a pin names can be rewritten; the bytes cannot. Both revisions are carried because the corpus at v0.10.1 does not track the PR head (declared on in-toto/attestation#570, comment 5696811312)."
+}
