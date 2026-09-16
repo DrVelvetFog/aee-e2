@@ -27,10 +27,24 @@ one of them can be told apart from a mistake.
 
 ## Independence
 
-Not consulted, and not to be consulted before step 3 is committed: the Rust `aee-checker`, the
-reference Go reader in the corpus repository, `vectors/interpretation-decisions.json`,
-`vectors/CHANGES.md`, `crosswalks/`, `DISPOSITIONS.md`. The manifest is read at scoring time,
-which is unavoidable; it is not read to tune behaviour beforehand.
+Not consulted, and not to be consulted before step 3 is committed: the Rust `aee-checker`,
+including the interpretation-decisions section of its `PARITY-REPORT.md`; the reference Go
+reader in the corpus repository; the suite's interpretation registry, including
+`vectors/interpretation-decisions.json`; `vectors/CHANGES.md`; `crosswalks/`;
+`DISPOSITIONS.md`. The manifest is read at scoring time, which is unavoidable; it is not read
+to tune behaviour beforehand.
+
+The registry and the parity report are on that list for the reason the other implementer put
+best: after the first run they are a reconciliation surface, and before it they are an answer
+key.
+
+## Spec drift
+
+`DRIFT.md` maps each of the four hunks between the corpus-pinned text and the head to the
+rules it touches, written from the two spec texts before the first run. One hunk of four can
+change a verdict, in one shape, in one direction; the other three cannot change either scored
+value. Fixing that map in advance is what makes a "known drift" label a finding rather than an
+excuse.
 
 ## Running the tests
 

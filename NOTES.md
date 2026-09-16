@@ -175,3 +175,31 @@ verifier would then depend on the well-formedness gate having run first, which
 the two-stage description does not promise.
 
 **Where.** `aee/result.py`, `recompute_result` and `_vocabulary`.
+
+---
+
+## 9. "the pinned `networkPosture` digest"
+
+**Text.** The `arming` kind requires `aeePostureDigest` "equal to the pinned
+`networkPosture` digest", and at the head the `sealed` kind requires the same.
+
+**Question.** Which value is "the pinned `networkPosture` digest"? The statement
+carries `observationEnvironment.networkPosture` as an object with its own
+`digest.sha256`, and the run binding separately derives a digest over that whole
+object.
+
+**Reading taken.** `observationEnvironment.networkPosture.digest.sha256` -- the
+configuration digest the member carries.
+
+**Why.** The environment describes that member as "the substrate-authoritative
+egress posture ... with its configuration digest", and a record attesting the
+posture it ran under is attesting that configuration. The run-binding value is
+a digest over the carried object including that member, derived for a different
+purpose and named differently everywhere it appears.
+
+**Alternative.** The run-binding-style digest over the whole carried
+`networkPosture` object. A rail taking that reading refuses every statement this
+one accepts on substrate rows, and vice versa, so a divergence here would be
+loud rather than subtle.
+
+**Where.** `aee/coverage.py`.
