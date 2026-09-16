@@ -134,3 +134,44 @@ letter and identical in effect here; it would matter if the decoder were
 lenient, which is exactly what is being avoided.
 
 **Where.** `aee/ijson.py`, `loads`.
+
+---
+
+## 7. A missing `containmentObserved` under the first condition
+
+**Text.** The first condition holds when a row "carries a containment-observed
+label from the carried caught set ..., a label outside the carried
+`observationVocabulary.labels` (fail-closed), or a missing or out-of-vocabulary
+`basis`, `method` or `attribution` (fail-closed)".
+
+**Question.** The sentence spells out *missing* for the three axes but not for
+`containmentObserved`. What does the recompute do when the member is absent?
+
+**Reading taken.** Absent counts as "outside the carried labels", so the
+condition holds and contributes `fail`.
+
+**Why.** A member that is not there is not in the carried set, and the
+fail-closed direction is the one the same sentence takes everywhere else. The
+recompute is also defined as total, so it must answer rather than decline.
+
+**Alternative.** Treat the omission as a well-formedness fault only, leaving the
+recompute to run on the remaining rows. The statement is invalid either way, so
+the two readings differ in the refusal given, not in the verdict -- and refusal
+codes are measured rather than scored.
+
+**Where.** `aee/result.py`, `_condition_one`.
+
+---
+
+## 8. The recompute on a malformed predicate
+
+**Reading taken.** `recompute_result` never raises. Anything it cannot read
+resolves fail-closed: an absent vocabulary yields empty carried sets, which puts
+every label outside them and contributes `fail`.
+
+**Why.** "Defined as a total, deterministic, severity-independent function of
+the predicate". A function that throws on some predicates is not total, and the
+verifier would then depend on the well-formedness gate having run first, which
+the two-stage description does not promise.
+
+**Where.** `aee/result.py`, `recompute_result` and `_vocabulary`.
