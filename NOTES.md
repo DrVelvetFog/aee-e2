@@ -84,7 +84,7 @@ could not be used to emit a value the profile permits.
 any depth and in both member-name and value position."
 
 **Reading taken.** A noncharacter reached through a `\u` escape, including one
-assembled from a surrogate pair such as `🿾` for U+1FFFE, is refused
+assembled from a surrogate pair such as `\ud83f\udffe` for U+1FFFE, is refused
 exactly as a literal one is.
 
 **Why.** The rule is about the code point a string denotes, not the bytes that
