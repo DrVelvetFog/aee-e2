@@ -4,7 +4,22 @@ Second implementation (E2) for [in-toto/attestation#570][pr], written from the s
 text alone, per §e3 of the [ITE draft at `58eee06`][ite]. Seat accepted by the spec author on
 2026-09-15; terms and the head-vs-corpus spec drift are declared in [comment 5696811312][c].
 
+## Language and tooling
+
 Python, standard library only. No third-party dependencies, at any point.
+
+**This implementation was written with an AI coding agent, Claude Code, essentially
+throughout — the validator, the tests, the reading notes and the drift map.** The work was
+directed and the claims and outward text were decided and reviewed by a person, but the code
+is agent-written.
+
+This is declared because the ITE's E2 definition asks for language and tooling to be declared
+and, on the argument in [comment 5698439760][d], agent assistance belongs in that declaration:
+agent-written implementations of one specification tend to fail together, concentrated where
+the specification is hard or ambiguous. Two independently written rails is the property the
+tier is buying; two rails out of the same model family is a weaker thing wearing the same
+name, and nobody can see the difference unless it is declared. The other implementation of
+this predicate, `aee-checker`, is also agent-written and declared so on the same day.
 
 ## Evidence order
 
@@ -19,12 +34,26 @@ This repository is committed in the order agreed on the PR before any code was w
 changed between the harness commit and the first-run commit, so the run is reproducible
 from the committed tree.
 
+**A limit of that, stated rather than left to be found.** This repository was created at
+2026-09-16T12:55:28Z and pushed four seconds later with all sixteen commits already in it, so
+every date in the history is one the author asserted. The ordering above is true, and nothing
+outside this repository can check that it is true — which is a weaker claim than an
+externally witnessed sequence. Pushing after the pin commit, or timestamping the pins, is what
+would have made it checkable; the corpus ships `.sig`, `.ots` and `.tsr` beside its own
+digests, so the remedy is in-ecosystem. Anything pre-registered here in future will use it.
+
 ## Reading notes
 
 `NOTES.md` records places where the text underdetermines a reading, with the
 reading taken, the reason, and the alternative left on the table. Entries are
 written as they arise and before the first run, so that a divergence traced to
 one of them can be told apart from a mistake.
+
+None of the nine produced a divergence against the corpus. That was originally reported as
+evidence the specification is determinate at those passages, and that reading has been
+withdrawn: two agent-built rails agreeing tells you they share a prior, not that the text is
+determinate. What the run establishes is the fifteen defects it corrected, which are
+corrections rather than agreements.
 
 ## Independence
 
@@ -65,3 +94,4 @@ and reports reason parity as a separate figure.
 [pr]: https://github.com/in-toto/attestation/pull/570
 [ite]: https://github.com/in-toto/ITE/blob/58eee06534576ea250ff12f92a57fa5518b2c661/ITE/0000/README.adoc#e3
 [c]: https://github.com/in-toto/attestation/pull/570#issuecomment-5696811312
+[d]: https://github.com/in-toto/attestation/pull/570#issuecomment-5698439760
