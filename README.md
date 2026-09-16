@@ -12,11 +12,12 @@ This repository is committed in the order agreed on the PR before any code was w
 
 1. **Spec text pinned by digest** — `spec/SPEC-PIN.json`, with both revisions vendored as bytes.
 2. **Corpus digest as published at v0.10.1** — `spec/CORPUS-PIN.json`, digests file vendored.
-3. **First run with raw output, before any fix** — not yet taken.
-4. **Resolution log** — follows the first run.
+3. **First run with raw output, before any fix** — `reports/FIRST-RUN.md`, commit `c3686c4`.
+4. **Resolution log** — `RESOLUTION.md`.
 
-Steps 1 and 2 are this commit. Step 3 is committed before any directed fix is made, so the first
-run is reproducible from this tree whatever the score turns out to be.
+`git diff 0598d14 c3686c4 -- aee/ tools/ tests/ spec/` is empty: nothing but `reports/`
+changed between the harness commit and the first-run commit, so the run is reproducible
+from the committed tree.
 
 ## Reading notes
 
