@@ -390,10 +390,12 @@ class TestDoesNotAssert(unittest.TestCase):
     def test_wrong_shape(self):
         self.assertIn("wf-does-not-assert", codes(f.statement(doesNotAssert="no")))
 
-    def test_the_snake_case_spelling_is_not_an_alias(self):
-        # "which is not accepted as an alias" -- it is simply an unread member,
-        # so the canonical one is still absent and nothing complains about it.
-        self.assertEqual(check_wellformed(f.statement(does_not_assert=["x"])), [])
+    def test_the_snake_case_spelling_is_refused_not_ignored(self):
+        # R15. "which is not accepted as an alias, since two accepted spellings
+        # would mean two canonicalizations for the same content." This test
+        # originally asserted the opposite -- that the rejected spelling is
+        # simply an unread member -- and the corpus disagreed.
+        self.assertIn("wf-member-spelling", codes(f.statement(does_not_assert=["x"])))
 
 
 class TestAccumulation(unittest.TestCase):
@@ -412,3 +414,43 @@ class TestAccumulation(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSecondRoundRules(unittest.TestCase):
+    """R6, R7, R8, R12, R13, R15 -- found by working the remaining seventeen."""
+
+    def test_exactly_one_subject(self):
+        second = {"name": "b", "digest": {"sha256": f.HEX % 8}}
+        statement = f.statement()
+        statement["subject"].append(second)
+        self.assertIn("wf-subject-cardinality", codes(statement))
+
+    def test_coverage_may_not_name_an_undeclared_class(self):
+        coverage = {"assessedClasses": ["CO", "XZ"], "outOfScope": {}, "routedElsewhere": {}}
+        self.assertIn("wf-coverage-partition", codes(f.statement(coverage=coverage)))
+
+    def test_pinned_digests_must_be_lowercase_hex_on_a_substrate_statement(self):
+        for member in ("catchPolicy", "corpus", "networkPosture", "runEntropy", "substrate"):
+            statement = f.substrate_statement()
+            statement["predicate"]["observationEnvironment"][member]["digest"]["sha256"] = (
+                "AB" * 32
+            )
+            with self.subTest(member=member):
+                self.assertIn("wf-digest-not-canonical", codes(statement))
+
+    def test_the_vocabulary_digest_is_deliberately_exempt(self):
+        # Its recompute already cannot match a non-canonical value, so a second
+        # check there could never be the one to fail.
+        statement = f.substrate_statement()
+        statement["predicate"]["observationEnvironment"]["observationVocabulary"]["digest"]["sha256"] = "AB" * 32
+        found = codes(statement)
+        self.assertIn("wf-vocabulary-digest", found)
+        self.assertNotIn("wf-digest-not-canonical", found)
+
+    def test_batch_root_without_records(self):
+        statement = f.statement(batch_root=f.HEX % 8)
+        self.assertIn("wf-batch-root-orphaned", codes(statement))
+
+    def test_actual_layer_must_be_a_string(self):
+        statement = f.statement(rows=[f.row(actual_layer=7)], result="fail")
+        self.assertIn("wf-actual-layer-type", codes(statement))

@@ -10,14 +10,16 @@ reading it, and the diagnosis and disposition of R1-R4 were committed at
 `7ba3374` **before** any of them was applied, so what changed and why is on the
 record ahead of the change rather than reconstructed behind it.
 
-R1-R5 are now applied. The re-run is `reports/after-resolution/`.
+R1-R15 are now applied. The re-run is `reports/after-resolution/`.
 
-    first run   236 / 272 verdict,  54 / 61 result,  36 divergences
-    after       255 / 272 verdict,  61 / 61 result,  17 divergences
+    first run    236 / 272 verdict,  54 / 61 result,  36 divergences
+    after R1-R5  255 / 272 verdict,  61 / 61 result,  17 divergences
+    after R6-R15 272 / 272 verdict,  61 / 61 result,   0 divergences
 
-    resolved    19      exactly the four classes R1-R4 predicted
-    regressed    0      after R5; four before it, see R5
-    remaining   17      exactly the set logged as undiagnosed
+Full conformance on the pinned corpus. Every divergence the first run produced
+was an implementation fault; not one was a reading the specification leaves
+open, and not one of the readings recorded in `NOTES.md` before the run needed
+revising.
 
     vectors            272
     verdict matches    236  (86.8%)
@@ -278,10 +280,86 @@ head-versus-`0dbe10bc` decision is moot for this corpus at this suiteRevision.
 
 ---
 
-## Still open
+## Second round — the remaining seventeen
 
-Seventeen divergences are not yet diagnosed. Recording them now, undiagnosed,
-rather than after the fact:
+Worked after R1-R5, in one pass, each traced to spec text before being written.
+Ten classes:
+
+**R6 — `subject` must contain exactly one entry** (3 vectors, `aee-c-58`,
+`subject-cardinality`). "For this predicate `subject` MUST contain exactly one
+entry on a statement of any basis; a statement carrying zero or more than one
+subject is malformed, regardless of whether any row is `basis: substrate`." The
+run binding reads `subject[0]`, so a second entry is bound by nothing. Only
+emptiness was checked.
+
+**R7 — a coverage set may not name a class the manifest does not declare**
+(3, `aee-c-82`, `coverage-incomplete`). The three sets "are a disjoint partition
+of the manifest's classes". Both directions matter and only one was checked: a
+manifest class in no set was caught, a coverage class in no manifest was not.
+
+**R8 — the pinned digests must already be lowercase 64-hex** (2, `aee-c-59`,
+`digest-not-canonical`). "`catchPolicy`, `corpus`, `runEntropy`, `substrate` and
+`subject[0]` MUST each carry a `sha256` digest whose value is already lowercase
+64-hex, and so MUST `networkPosture` ...; a substrate-row-carrying statement
+violating this digest requirement is malformed." `observationVocabulary` is
+deliberately exempt, because its recompute cannot match a non-canonical value
+and "restating the requirement would add a check that could never be the one to
+fail" — the exemption is now a test of its own.
+
+**R9 — R5 extends to `containmentObserved`** (2, `fail-closed-substrate-row`).
+The class requirements branch on caught versus clean, and a label outside the
+carried vocabulary is neither, so no branch can cover such a row. This also
+settles the question R1 left open: `containmentObserved` does belong with
+`basis` and `method` on the fail-closed side for an `artifact` row, and with
+them on the uncoverable side for a `substrate` row. The corpus exercises the
+substrate half, which the R1 note said no vector did — it does, under a
+different condition.
+
+**R10 — `aeeDropCount` cannot be negative** (1, `aee-c-65`,
+`sealed-covers-nothing`). "an integer counting run-wide dropped observations". A
+count of things that happened has no negative value, and `-1` passes an
+upper-bound comparison against `aeeDropBound` vacuously, which is exactly how it
+slipped through.
+
+**R11 — an unimplemented `aeeBindingVersion` makes an arming record cover
+nothing** (1, `aee-c-75`, `arming-covers-nothing`). "a verifier reads it before
+deriving and rejects it fail-closed ... when the value is a version it does not
+implement, distinguishably from a run-binding digest mismatch."
+
+**R12 — a `batchRoot` carried over no records is malformed** (1, `aee-c-31`,
+`batch-root-orphaned`). "an empty array with no root", and "`batchRoot` is
+omitted only when `observationRecords` is absent". Only the converse was
+checked. A root over nothing commits to nothing and has no recompute that could
+check it.
+
+**R13 — `actualLayer` must be a string** (1, `aee-c-88`, `statement-malformed`).
+It "names the enforcement layer" and `none` is a literal string; the vector
+carries `7`. Presence was checked, type was not.
+
+**R14 — base64 must be canonical, not merely decodable** (1, `aee-c-19`,
+`record-undecodable`). The vector's payload ends `...In1=` where the canonical
+encoding is `...In0=`: a final quantum carrying non-zero bits outside the
+decoded bytes. `base64.b64decode(validate=True)` accepts it and discards the
+bits, so two distinct payload strings decode to the same bytes — the "two rails
+disagree on identical bytes" failure the whole encoding profile exists to
+prevent, reappearing one layer below the JSON. The decoder now re-encodes and
+compares.
+
+**R15 — the snake_case spelling is refused, not ignored** (1, `aee-c-84`,
+`member-spelling`). "`doesNotAssert` is the single canonical spelling ... which
+is not accepted as an alias, since two accepted spellings would mean two
+canonicalizations for the same content." A test here asserted the opposite —
+that the rejected spelling is simply an unread member — and the corpus
+disagreed. The test was wrong and has been rewritten to say so.
+
+**Outcome.** All ten applied, all seventeen resolved, no regressions: 272 of 272.
+
+---
+
+## The seventeen, as logged before they were worked
+
+Kept as written, so the list can be checked against what the second round
+actually found:
 
 | condition | divergences | direction |
 |---|---|---|

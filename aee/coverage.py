@@ -21,7 +21,7 @@ presence, because ``observationRecords`` requires at least one entry, and never
 verified -- that is stage two.
 """
 
-from .bindings import run_binding_digest
+from .bindings import BINDING_VERSION, run_binding_digest
 from .dsse import DSSEError, decode_payload, pae_for_record
 from .findings import Finding
 from .ijson import IJSONError, is_bmp_only, loads
@@ -306,6 +306,19 @@ def _check_kind(record, context, out):
     if kind == "interception":
         _check_hex_array(payload.get("aeePayloadCommitment"), "%s aeePayloadCommitment" % where, out)
     elif kind == "arming":
+        # R11. "An arming record's payload MAY carry an explicit
+        # aeeBindingVersion member declaring its construction; a verifier reads
+        # it before deriving and rejects it fail-closed (the arming record
+        # covers nothing) when the value is a version it does not implement."
+        # Read before deriving, so this is the first check on the kind.
+        if "aeeBindingVersion" in payload and payload["aeeBindingVersion"] != BINDING_VERSION:
+            out.append(
+                Finding(
+                    "cv-binding-version",
+                    "%s declares binding version %r, which this verifier does not "
+                    "implement" % (where, payload["aeeBindingVersion"]),
+                )
+            )
         _check_chain_members(payload, where, out)
         armed_at = payload.get("armedAt")
         if not is_admissible(armed_at):
@@ -330,6 +343,11 @@ def _check_kind(record, context, out):
         drop_count = payload.get("aeeDropCount")
         if not _is_integer(drop_count):
             out.append(Finding("cv-record-member", "%s aeeDropCount is absent or not an integer" % where))
+        elif drop_count < 0:
+            # R10. "an integer counting run-wide dropped observations" -- a
+            # count of things that happened has no negative value, and a
+            # negative one passes an upper-bound comparison vacuously.
+            out.append(Finding("cv-seal-covers-nothing", "%s aeeDropCount is negative" % where))
         elif drop_count != 0:
             bound = payload.get("aeeDropBound")
             if not _is_integer(bound):
@@ -472,6 +490,11 @@ def check_coverage_validity(statement):
             for member, allowed in (("method", METHOD_VALUES), ("attribution", ATTRIBUTION_VALUES))
             if row.get(member) not in allowed
         ]
+        # R9. The class requirements branch on whether the row is caught or
+        # clean, and a label outside the carried vocabulary is neither, so no
+        # branch can cover such a row either.
+        if row.get("containmentObserved") not in labels:
+            uncoverable.append("containmentObserved")
         if uncoverable:
             out.append(
                 Finding(

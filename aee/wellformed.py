@@ -96,6 +96,19 @@ def _check_statement_shape(statement, out):
     subject = statement.get("subject")
     if not isinstance(subject, list) or not subject:
         out.append(Finding("wf-subject", "subject is absent or empty"))
+    elif len(subject) != 1:
+        # R6. "For this predicate subject MUST contain exactly one entry on a
+        # statement of any basis; a statement carrying zero or more than one
+        # subject is malformed, regardless of whether any row is basis:
+        # substrate." The run binding reads subject[0] and a second entry would
+        # be bound by nothing.
+        out.append(
+            Finding(
+                "wf-subject-cardinality",
+                "subject carries %d entries; this predicate requires exactly one"
+                % len(subject),
+            )
+        )
     elif not _is_lower_64_hex(_digest_of(subject[0])):
         out.append(
             Finding(
@@ -283,6 +296,23 @@ def _check_environment(predicate, rows, out):
     has_substrate = any(
         isinstance(row, dict) and row.get("basis") == "substrate" for row in rows
     )
+    if has_substrate:
+        # R8. "catchPolicy, corpus, runEntropy, substrate and subject[0] MUST
+        # each carry a sha256 digest whose value is already lowercase 64-hex,
+        # and so MUST networkPosture ...; a substrate-row-carrying statement
+        # violating this digest requirement is malformed." observationVocabulary
+        # is deliberately excluded: the digest-integrity step recomputes it, and
+        # a value that is not lowercase 64-hex cannot equal that recompute.
+        for member in ("catchPolicy", "corpus", "networkPosture", "runEntropy", "substrate"):
+            node = environment.get(member)
+            if isinstance(node, dict) and not _is_lower_64_hex(_digest_of(node)):
+                out.append(
+                    Finding(
+                        "wf-digest-not-canonical",
+                        "observationEnvironment.%s.digest.sha256 is absent or not "
+                        "lowercase 64-hex" % member,
+                    )
+                )
     if has_substrate and not isinstance(environment.get("runEntropy"), dict):
         out.append(
             Finding(
@@ -350,6 +380,16 @@ def _check_rows(predicate, rows, declared, out):
                                 % (where, ref, record_count),
                             )
                         )
+
+        # R13. actualLayer "names the enforcement layer", and `none` is a
+        # literal string, so a non-string value is not a layer name at all.
+        if "actualLayer" in row and not isinstance(row["actualLayer"], str):
+            out.append(
+                Finding(
+                    "wf-actual-layer-type",
+                    "%s carries a non-string actualLayer" % where,
+                )
+            )
 
         # "On a row whose containmentObserved label is from the carried labels
         # but not in the caught set (a clean row: nothing acted), the producer
@@ -435,6 +475,18 @@ def _check_coverage(predicate, rows, declared, out):
                 )
             )
 
+    # R7. The three sets partition *the manifest's classes*, so a coverage set
+    # naming a class the manifest does not declare is not a partition of them.
+    for class_code in sorted(membership):
+        if class_code not in classes:
+            out.append(
+                Finding(
+                    "wf-coverage-partition",
+                    "coverage names class %r, which the manifest does not declare"
+                    % class_code,
+                )
+            )
+
     # "Coverage integrity is checked at attack granularity: the union of
     # attackIds for the assessed classes must exactly equal the manifest's."
     expected = set()
@@ -495,6 +547,31 @@ def check_wellformed(statement):
             Finding(
                 "wf-batch-root",
                 "batchRoot is absent while observationRecords is non-empty",
+            )
+        )
+    # R12. "an empty array with no root", and "batchRoot is omitted only when
+    # observationRecords is absent". A root carried over nothing commits to
+    # nothing and has no recompute that could ever check it.
+    if "batchRoot" in predicate and not records:
+        out.append(
+            Finding(
+                "wf-batch-root-orphaned",
+                "batchRoot is carried with no observationRecords to recompute it over",
+            )
+        )
+
+    # R15. "doesNotAssert is the single canonical spelling: earlier internal
+    # versions used a snake_case spelling ..., which is not accepted as an
+    # alias, since two accepted spellings would mean two canonicalizations for
+    # the same content." Two spellings for one meaning is the divergence this
+    # predicate's encoding profile exists to prevent, so the rejected spelling
+    # is refused rather than ignored.
+    if "does_not_assert" in predicate:
+        out.append(
+            Finding(
+                "wf-member-spelling",
+                "predicate carries does_not_assert; doesNotAssert is the single "
+                "canonical spelling and the other is not an alias",
             )
         )
 

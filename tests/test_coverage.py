@@ -464,3 +464,47 @@ class TestDriftSwitch(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSecondRoundRules(unittest.TestCase):
+    """R9, R10, R11, R14 -- found by working the remaining seventeen."""
+
+    def test_an_out_of_vocabulary_label_makes_a_substrate_row_uncoverable(self):
+        statement = copy.deepcopy(f.substrate_statement())
+        statement["predicate"]["attackResults"][0]["containmentObserved"] = "example_label_a"
+        self.assertIn("cv-uncoverable-substrate-row", codes(statement))
+
+    def test_but_not_an_artifact_row(self):
+        statement = f.statement(rows=[f.row(observed="example_label_a")], result="fail")
+        self.assertEqual(check_coverage_validity(statement), [])
+
+    def test_a_negative_drop_count_covers_nothing(self):
+        # It would otherwise pass an upper-bound comparison vacuously.
+        statement = f.substrate_statement(drop_count=-1, drop_bound=5)
+        self.assertIn("cv-seal-covers-nothing", codes(statement))
+
+    def test_an_unimplemented_binding_version_covers_nothing(self):
+        statement = edit_record(f.substrate_statement(), ARMING, aeeBindingVersion="3")
+        self.assertIn("cv-binding-version", codes(statement))
+
+    def test_the_implemented_binding_version_may_be_declared_explicitly(self):
+        statement = edit_record(f.substrate_statement(), ARMING, aeeBindingVersion="2")
+        self.assertEqual(check_coverage_validity(statement), [])
+
+    def test_non_canonical_base64_is_undecodable(self):
+        # Trailing bits outside the decoded bytes: two distinct payload strings
+        # decoding to the same bytes is the divergence the profile exists to
+        # prevent, so a lenient decode is not good enough.
+        statement = copy.deepcopy(f.substrate_statement())
+        record = statement["predicate"]["observationRecords"][INTERCEPTION]
+        carried = record["payload"]
+        assert carried.endswith("=")
+        alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+        last = carried.rstrip("=")[-1]
+        record["payload"] = carried.rstrip("=")[:-1] + alphabet[alphabet.index(last) + 1] + "=" * (len(carried) - len(carried.rstrip("=")))
+        # The root is deliberately not rebuilt: a record whose payload cannot be
+        # decoded has no leaf hash, so there is no root to rebuild, which is
+        # itself part of what the refusal means.
+        found = codes(statement)
+        self.assertIn("cv-payload-parse", found)
+        self.assertIn("cv-batch-root", found)

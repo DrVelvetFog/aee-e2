@@ -54,9 +54,17 @@ def decode_payload(payload):
     if not isinstance(payload, str):
         raise DSSEError("payload must be a JSON string")
     try:
-        return base64.b64decode(payload, validate=True)
+        decoded = base64.b64decode(payload, validate=True)
     except (binascii.Error, ValueError) as exc:
         raise DSSEError("payload is not valid base64: %s" % exc) from exc
+    # R14. The encoding must be canonical as well as decodable. A final quantum
+    # carrying non-zero bits outside the decoded bytes decodes without error in
+    # most libraries, which silently gives two distinct payload strings that
+    # decode to the same bytes -- the "two rails disagree on identical bytes"
+    # failure the whole encoding profile exists to prevent.
+    if base64.b64encode(decoded).decode("ascii") != payload:
+        raise DSSEError("payload is not canonical base64")
+    return decoded
 
 
 def pae_for_record(record):

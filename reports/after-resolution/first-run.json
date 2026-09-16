@@ -1657,7 +1657,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "cv-binding-version"
+      ],
       "conditions": [
         "aee-c-75"
       ],
@@ -1667,12 +1669,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v081d9eeddbd5634f.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v081d9eeddbd5634f",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -1841,7 +1843,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-batch-root-orphaned"
+      ],
       "conditions": [
         "aee-c-31"
       ],
@@ -1851,12 +1855,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v577011f7dd9a08fe.json",
-      "got_result": "pass_indirect",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v577011f7dd9a08fe",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -1881,6 +1885,7 @@
     },
     {
       "codes": [
+        "cv-payload-parse",
         "cv-batch-root"
       ],
       "conditions": [
@@ -2003,7 +2008,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "cv-uncoverable-substrate-row"
+      ],
       "conditions": [
         "aee-c-4",
         "aee-c-44"
@@ -2014,12 +2021,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v539055896bf3a954.json",
-      "got_result": "fail",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v539055896bf3a954",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -2044,7 +2051,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-actual-layer-type"
+      ],
       "conditions": [
         "aee-c-88"
       ],
@@ -2054,12 +2063,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v3eb268f467674845.json",
-      "got_result": "fail",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v3eb268f467674845",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -2186,7 +2195,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-subject-cardinality"
+      ],
       "conditions": [
         "aee-c-58"
       ],
@@ -2196,15 +2207,17 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v6f6941efba2cbe28.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v6f6941efba2cbe28",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-digest-not-canonical"
+      ],
       "conditions": [
         "aee-c-59"
       ],
@@ -2214,15 +2227,17 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v495bb03f306ef6aa.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v495bb03f306ef6aa",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-digest-not-canonical"
+      ],
       "conditions": [
         "aee-c-59"
       ],
@@ -2232,15 +2247,17 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/vbd93d974436e11eb.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "vbd93d974436e11eb",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "cv-uncoverable-substrate-row"
+      ],
       "conditions": [
         "aee-c-4",
         "aee-c-44",
@@ -2252,12 +2269,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/va54b6faefcfb1f9e.json",
-      "got_result": "fail",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "va54b6faefcfb1f9e",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -2660,7 +2677,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-subject-cardinality"
+      ],
       "conditions": [
         "aee-c-58"
       ],
@@ -2670,12 +2689,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v423dab49f4ed4d29.json",
-      "got_result": "pass_indirect",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v423dab49f4ed4d29",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -3102,7 +3121,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-coverage-partition"
+      ],
       "conditions": [
         "aee-c-82"
       ],
@@ -3112,15 +3133,17 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v5a842871df5bfe33.json",
-      "got_result": "fail",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v5a842871df5bfe33",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-coverage-partition"
+      ],
       "conditions": [
         "aee-c-82"
       ],
@@ -3130,15 +3153,17 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/vb3c92d4ecb62bbfb.json",
-      "got_result": "degraded",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "vb3c92d4ecb62bbfb",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-coverage-partition"
+      ],
       "conditions": [
         "aee-c-82"
       ],
@@ -3148,12 +3173,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/ved230b46692c0ada.json",
-      "got_result": "degraded",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "ved230b46692c0ada",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -3491,7 +3516,13 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-batch-root",
+        "cv-observed-set"
+      ],
       "conditions": [
         "aee-c-19"
       ],
@@ -3501,12 +3532,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v4ff6cb70764bf703.json",
-      "got_result": "fail",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v4ff6cb70764bf703",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -3529,7 +3560,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-member-spelling"
+      ],
       "conditions": [
         "aee-c-84"
       ],
@@ -3539,12 +3572,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v3c3a76f63bf8dda8.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v3c3a76f63bf8dda8",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -4828,7 +4861,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
       "conditions": [
         "aee-c-65"
       ],
@@ -4838,12 +4873,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v1ec06de44fe4000d.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v1ec06de44fe4000d",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -5108,7 +5143,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
       "conditions": [
         "aee-c-108"
       ],
@@ -5118,12 +5155,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/vb1337e5ecad985c2.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "vb1337e5ecad985c2",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -5272,7 +5309,9 @@
       "verdict_match": true
     },
     {
-      "codes": [],
+      "codes": [
+        "wf-subject-cardinality"
+      ],
       "conditions": [
         "aee-c-58"
       ],
@@ -5282,12 +5321,12 @@
       "expected_result": null,
       "expected_verdict": "invalid",
       "file": "statements/v399c693cbf60143b.json",
-      "got_result": "pass",
-      "got_verdict": "valid",
+      "got_result": null,
+      "got_verdict": "invalid",
       "id": "v399c693cbf60143b",
       "kind": "reject",
       "result_match": null,
-      "verdict_match": false
+      "verdict_match": true
     },
     {
       "codes": [
@@ -5314,7 +5353,11 @@
     },
     {
       "codes": [
-        "cv-record-signatures"
+        "cv-payload-parse",
+        "cv-record-signatures",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-batch-root"
       ],
       "conditions": [
         "aee-c-91"
@@ -5332,7 +5375,11 @@
     },
     {
       "codes": [
-        "cv-record-signatures"
+        "cv-record-signatures",
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-batch-root"
       ],
       "conditions": [
         "aee-c-91"
@@ -5351,59 +5398,12 @@
   ],
   "summary": {
     "accepts": 61,
-    "divergences": 17,
-    "divergent_conditions": {
-      "aee-c-108": [
-        "vb1337e5ecad985c2"
-      ],
-      "aee-c-19": [
-        "v4ff6cb70764bf703"
-      ],
-      "aee-c-31": [
-        "v577011f7dd9a08fe"
-      ],
-      "aee-c-4": [
-        "v539055896bf3a954",
-        "va54b6faefcfb1f9e"
-      ],
-      "aee-c-44": [
-        "v539055896bf3a954",
-        "va54b6faefcfb1f9e"
-      ],
-      "aee-c-53": [
-        "va54b6faefcfb1f9e"
-      ],
-      "aee-c-58": [
-        "v6f6941efba2cbe28",
-        "v423dab49f4ed4d29",
-        "v399c693cbf60143b"
-      ],
-      "aee-c-59": [
-        "v495bb03f306ef6aa",
-        "vbd93d974436e11eb"
-      ],
-      "aee-c-65": [
-        "v1ec06de44fe4000d"
-      ],
-      "aee-c-75": [
-        "v081d9eeddbd5634f"
-      ],
-      "aee-c-82": [
-        "v5a842871df5bfe33",
-        "vb3c92d4ecb62bbfb",
-        "ved230b46692c0ada"
-      ],
-      "aee-c-84": [
-        "v3c3a76f63bf8dda8"
-      ],
-      "aee-c-88": [
-        "v3eb268f467674845"
-      ]
-    },
-    "fully_matching": 255,
+    "divergences": 0,
+    "divergent_conditions": {},
+    "fully_matching": 272,
     "result_matches": 61,
     "vectors": 272,
-    "verdict_matches": 255
+    "verdict_matches": 272
   },
-  "taken": "2026-09-16T12:41:33Z"
+  "taken": "2026-09-16T12:47:44Z"
 }
