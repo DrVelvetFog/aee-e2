@@ -6,9 +6,18 @@ run with raw output before any fix, then this.
 
 The first run is `reports/FIRST-RUN.md`, committed at `c3686c4` with no source
 file changed between the run and the commit. Everything below was written after
-reading it. Nothing below has been applied yet: this state of the log is the
-diagnosis and the disposition, so that what gets changed and why is on the
-record before the change, not reconstructed after it.
+reading it, and the diagnosis and disposition of R1-R4 were committed at
+`7ba3374` **before** any of them was applied, so what changed and why is on the
+record ahead of the change rather than reconstructed behind it.
+
+R1-R5 are now applied. The re-run is `reports/after-resolution/`.
+
+    first run   236 / 272 verdict,  54 / 61 result,  36 divergences
+    after       255 / 272 verdict,  61 / 61 result,  17 divergences
+
+    resolved    19      exactly the four classes R1-R4 predicted
+    regressed    0      after R5; four before it, see R5
+    remaining   17      exactly the set logged as undiagnosed
 
     vectors            272
     verdict matches    236  (86.8%)
@@ -63,6 +72,17 @@ well-formedness required-member list and delete the row-vocabulary check.
 divergences resolved, and no vector currently matching should move, because the
 recompute's fail-closed arm already produces `fail` for exactly these rows.
 
+**Outcome.** Applied. The five resolved. The prediction that nothing else would
+move was **wrong**: four vectors that had been refused correctly became accepted,
+because the over-broad check had been masking a narrow rule that was never
+implemented. That is R5, and it is the more interesting half of this entry.
+
+**Note left in the code.** `containmentObserved` is named in the same sentence
+as `basis` and `method` and arguably belongs on the same side of the line. It
+stays in the well-formedness gate because no vector in the pinned corpus
+exercises the case, and the spec's own standard for an untested reading is that
+it is "a candidate for the next vector, not a settled rule".
+
 ---
 
 ## R2 — Method strength was compared against records that cover nothing
@@ -92,6 +112,8 @@ it. One word of the requirement, dropped.
 
 **Disposition.** Restrict the strength comparison to records whose `aeeKind` is
 in `COVERING_KINDS`. Expected effect: two divergences resolved.
+
+**Outcome.** Applied. Two resolved, nothing else moved.
 
 ---
 
@@ -135,6 +157,13 @@ syntax-checked in the reserved-member walk and touch neither the recompute, the
 coverage requirements, nor the tier — so the implementation is a syntax gate and
 must not reach further. Expected effect: seven divergences resolved.
 
+**Outcome.** Applied as `_check_chain_members`, with fourteen tests covering each
+clause of the syntax list separately. Seven resolved, nothing else moved. The
+empty `aeeChainScope` array is admitted: the spec calls it "the single global
+per-key counter that makes every chain rule below vacuous and leaks the
+producer's total run volume across its customers", which is a warning about what
+it costs a producer, not a syntax violation.
+
 ---
 
 ## R4 — A seal reporting its moat down is a violation even when unresolved
@@ -176,10 +205,62 @@ compares against "the `aeePostureDigest` of every `arming` record the row
 resolves", which is row-relative and cannot move to the kind check. Expected
 effect: five divergences resolved.
 
+**Outcome.** Applied. Five resolved, nothing else moved. `_seal_covers` stays as
+the row-scoped check, for the reason given.
+
 **Note on the drift constant.** This entry sits next to
 `SEALED_POSTURE_IS_A_KIND_CONSTRAINT` and is not the same question. R4 is about
 `aeeStillArmed`, which both spec revisions treat identically. The drift hunk is
 about `aeePostureDigest`, and no vector in this corpus exercises it — see below.
+
+---
+
+## R5 — A substrate row that cannot be covered is invalid, not merely fail-closed
+
+**Found by applying R1**, not by reading the first run. Four vectors that R1
+turned from correctly-refused into wrongly-accepted: `vcac966c6b2ba6295`,
+`v84f40e16772e5f91` (`aee-c-5`, `aee-c-42`, `aee-c-44`), `v590d80afd6a67f0f`,
+`vb370622a59690b75` (`aee-c-105`). All four expect `invalid` under the reference
+code `fail-closed-substrate-row`.
+
+**What the vectors carry.** A row with `basis: substrate` and either a missing
+`method`, an out-of-vocabulary `method: "example.method-x"`, a missing
+`attribution`, or an out-of-vocabulary `attribution: "example_strong"`. This is
+the same defect as R1's five vectors, on a row that declares a different
+`basis`.
+
+**What the spec says.**
+
+> A producer MUST NOT declare `basis: substrate` on a row it cannot cover under
+> the coverage validity requirements above: such a row is not merely mislabeled,
+> it makes the attestation invalid.
+
+The coverage requirements are keyed on `method` — a caught `intercepted` row
+needs an `interception`, a `reconstructed` row needs an `examination`, a clean
+`intercepted` row needs an `arming` and a covering `sealed` — and the pinned
+requirement is keyed on `attribution`. A row carrying a missing or unrecognised
+value for either satisfies none of them and cannot satisfy any of them, so it is
+a row that cannot be covered.
+
+**Verdict on the divergence.** R1 was right and incomplete. The well-formedness
+check it removed had been refusing these four for the wrong reason, which hid
+the fact that the right reason was never implemented. Removing an over-broad
+check to find a missing narrow one is the ordinary shape of this; recording it
+is the point of the log.
+
+**R1 and R5 are two halves of one sentence.** The same missing `method` makes an
+`artifact` row valid with `result: fail` and a `substrate` row invalid. Neither
+half is safe to implement without the other: R1 alone accepts four statements it
+should refuse, and the original code refused five it should accept.
+
+**Disposition.** In coverage validity, for every row declaring
+`basis: substrate`, require `method` and `attribution` to be present and in
+their closed vocabulary. `basis` itself needs no such check: a row whose `basis`
+is out of vocabulary is not `substrate`, so no coverage requirement applies to
+it and the recompute's fail-closed arm is the whole of its treatment.
+
+**Outcome.** Applied. Four regressions resolved, no new ones, and the remaining
+divergences are exactly the seventeen logged below as undiagnosed.
 
 ---
 
@@ -206,9 +287,14 @@ rather than after the fact:
 |---|---|---|
 | `aee-c-58` | 3 | too permissive |
 | `aee-c-82` | 3 | too permissive |
-| `aee-c-59` | 2 | too permissive |
 | `aee-c-4` | 2 | too permissive |
-| `aee-c-19`, `aee-c-31`, `aee-c-53`, `aee-c-65`, `aee-c-75`, `aee-c-84`, `aee-c-88`, `aee-c-96` | 1 each | too permissive |
+| `aee-c-44` | 2 | too permissive |
+| `aee-c-59` | 2 | too permissive |
+| `aee-c-19`, `aee-c-31`, `aee-c-53`, `aee-c-65`, `aee-c-75`, `aee-c-84`, `aee-c-88`, `aee-c-108` | 1 each | too permissive |
+
+(The condition tally shifted slightly against the first-run table above, because
+several of these vectors carry more than one condition and some of their
+siblings were resolved by R1-R5.)
 
 All seventeen are in the permissive direction, which is consistent with the
 shape of the first three resolved entries: the gaps in this implementation are
@@ -220,13 +306,14 @@ will say which when each is worked.
 
 Two things worth separating from the score.
 
-The `result` recompute was correct on every statement it was asked about: 54 of
-54 accepted statements carried the token this implementation derived, across all
-four values. No divergence anywhere in the run is a `result` disagreement on an
-accepted statement.
+The `result` recompute was correct on every statement it was asked about. At the
+first run that was 54 of 54 accepted statements; after R1-R5 it is **61 of 61**,
+every accepted statement in the corpus, across all four tokens. No divergence at
+either run is a `result` disagreement.
 
 Every divergence diagnosed so far is an implementation fault, not a reading the
-spec leaves open. Three are omissions and one is an altitude error. None of the
-nine readings recorded in `NOTES.md` before the run has produced a divergence.
+spec leaves open. Three were omissions, one an altitude error, and one — R5 —
+was hidden behind another. None of the nine readings recorded in `NOTES.md`
+before the run has produced a divergence, and none has needed revising.
 
 [pr]: https://github.com/in-toto/attestation/pull/570

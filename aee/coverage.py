@@ -28,7 +28,7 @@ from .ijson import IJSONError, is_bmp_only, loads
 from .jcs import canonicalize, sort_utf16
 from .merkle import MerkleError, root_for_records
 from .observed_set import OBSERVED_KINDS, observed_set_from_paes
-from .result import is_clean_row
+from .result import ATTRIBUTION_VALUES, METHOD_VALUES, is_clean_row
 from .timestamps import is_admissible, parse_instant
 
 __all__ = [
@@ -105,6 +105,101 @@ def _check_identifier_array(values, declared, where, out):
         ok = False
     return ok
 
+
+
+
+#: "aeeChainScope ... a closed vocabulary ... subject to subject[0].digest.sha256,
+#: corpus to observationEnvironment.corpus.digest, and networkPosture to
+#: networkPosture.digest.sha256"
+CHAIN_SCOPE_TOKENS = frozenset({"subject", "corpus", "networkPosture"})
+
+_CHAIN_MEMBERS = ("aeeRunSeq", "aeePrevRunBinding", "aeeChainScope")
+
+
+def _check_chain_members(payload, where, out):
+    """The chain-of-runs syntax rules, on an arming record.
+
+    > A violation of the syntax rules (a non-positive or non-integer
+    > ``aeeRunSeq``, a malformed ``aeePrevRunBinding``, a missing
+    > ``aeeChainScope`` when the sequence is present, a non-array
+    > ``aeeChainScope``, an array carrying a token outside the registered
+    > vocabulary, an array not in canonical order ..., or any of the three
+    > present without ``aeeRunSeq``) is handled as any reserved-member
+    > violation: the record covers nothing.
+
+    Syntax and nothing else: "within one attestation these members are
+    syntax-checked in the reserved-member walk and nothing else normative reads
+    them". The chain's value is across attestations, as consumer policy, and a
+    verifier holding one statement has no second one to compare against.
+    """
+    present = [name for name in _CHAIN_MEMBERS if name in payload]
+    if not present:
+        return
+    if "aeeRunSeq" not in payload:
+        out.append(
+            Finding(
+                "cv-chain-members",
+                "%s carries %s without aeeRunSeq" % (where, ", ".join(present)),
+            )
+        )
+        return
+
+    sequence = payload["aeeRunSeq"]
+    if not _is_integer(sequence) or sequence < 1:
+        out.append(
+            Finding(
+                "cv-chain-members",
+                "%s aeeRunSeq is not a positive integer" % where,
+            )
+        )
+
+    scope = payload.get("aeeChainScope")
+    if "aeeChainScope" not in payload:
+        out.append(
+            Finding(
+                "cv-chain-members",
+                "%s carries aeeRunSeq with no aeeChainScope" % where,
+            )
+        )
+    elif not isinstance(scope, list) or not all(isinstance(x, str) for x in scope):
+        out.append(
+            Finding("cv-chain-members", "%s aeeChainScope is not an array of strings" % where)
+        )
+    else:
+        if not set(scope) <= CHAIN_SCOPE_TOKENS:
+            out.append(
+                Finding(
+                    "cv-chain-members",
+                    "%s aeeChainScope carries a token outside the registered vocabulary" % where,
+                )
+            )
+        if len(set(scope)) != len(scope):
+            out.append(
+                Finding("cv-array-duplicate", "%s aeeChainScope carries a duplicate entry" % where)
+            )
+        elif list(scope) != sort_utf16(scope):
+            out.append(
+                Finding("cv-array-order", "%s aeeChainScope is not in canonical order" % where)
+            )
+
+    # "absent exactly when aeeRunSeq is 1"
+    previous = payload.get("aeePrevRunBinding")
+    if _is_integer(sequence) and sequence == 1:
+        if "aeePrevRunBinding" in payload:
+            out.append(
+                Finding(
+                    "cv-chain-members",
+                    "%s carries aeePrevRunBinding on the genesis run" % where,
+                )
+            )
+    elif _is_integer(sequence) and sequence > 1:
+        if not _is_lower_64_hex(previous):
+            out.append(
+                Finding(
+                    "cv-chain-members",
+                    "%s aeePrevRunBinding is absent or not lowercase 64-hex" % where,
+                )
+            )
 
 class _Record:
     """One carried record, reduced to what the gate reads."""
@@ -211,6 +306,7 @@ def _check_kind(record, context, out):
     if kind == "interception":
         _check_hex_array(payload.get("aeePayloadCommitment"), "%s aeePayloadCommitment" % where, out)
     elif kind == "arming":
+        _check_chain_members(payload, where, out)
         armed_at = payload.get("armedAt")
         if not is_admissible(armed_at):
             out.append(Finding("cv-record-member", "%s armedAt is absent or outside the pinned timestamp profile" % where))
@@ -222,11 +318,25 @@ def _check_kind(record, context, out):
         if record.method != "intercepted":
             out.append(Finding("cv-record-method", "%s is an arming record whose aeeMethod is not intercepted" % where))
     elif kind == "sealed":
-        if not isinstance(payload.get("aeeStillArmed"), bool):
-            out.append(Finding("cv-record-member", "%s aeeStillArmed is absent or not a boolean" % where))
-        if not _is_integer(payload.get("aeeDropCount")):
+        # R4. The conditions stated at the kind's class definition are
+        # constraints of the kind, so the universal partner evaluates them
+        # against every carried binding seal, resolved or not: "a substrate
+        # signs a sealed record reporting its moat down, the producer carries
+        # that record and points the row at a second seal, and the run reads
+        # clean with the record that says otherwise sitting in the statement
+        # and inside batchRoot."
+        if payload.get("aeeStillArmed") is not True:
+            out.append(Finding("cv-seal-covers-nothing", "%s aeeStillArmed is absent, not a boolean, or false" % where))
+        drop_count = payload.get("aeeDropCount")
+        if not _is_integer(drop_count):
             out.append(Finding("cv-record-member", "%s aeeDropCount is absent or not an integer" % where))
-        if "aeeDropBound" in payload and not _is_integer(payload["aeeDropBound"]):
+        elif drop_count != 0:
+            bound = payload.get("aeeDropBound")
+            if not _is_integer(bound):
+                out.append(Finding("cv-seal-covers-nothing", "%s carries a non-zero aeeDropCount with no integer aeeDropBound" % where))
+            elif drop_count > bound:
+                out.append(Finding("cv-seal-covers-nothing", "%s aeeDropCount exceeds its declared aeeDropBound" % where))
+        elif "aeeDropBound" in payload and not _is_integer(payload["aeeDropBound"]):
             out.append(Finding("cv-record-member", "%s aeeDropBound is not an integer" % where))
         if not isinstance(payload.get("aeePostureDigest"), str):
             out.append(Finding("cv-record-member", "%s aeePostureDigest is absent" % where))
@@ -347,6 +457,31 @@ def check_coverage_validity(statement):
     # --- the five per-substrate-row requirements ---------------------------
     for index, row in substrate_rows:
         where = "attackResults[%d]" % index
+
+        # R5. "A producer MUST NOT declare basis: substrate on a row it cannot
+        # cover under the coverage validity requirements above: such a row is
+        # not merely mislabeled, it makes the attestation invalid." The
+        # requirements below are keyed on `method`, and the pinned requirement
+        # on `attribution`, so a row carrying a missing or out-of-vocabulary
+        # value for either cannot be covered by any of them. On a row that is
+        # not `basis: substrate` the same value only drives the recompute's
+        # fail-closed arm and leaves the statement valid -- see RESOLUTION.md
+        # R1 and R5, which are the two halves of one line.
+        uncoverable = [
+            member
+            for member, allowed in (("method", METHOD_VALUES), ("attribution", ATTRIBUTION_VALUES))
+            if row.get(member) not in allowed
+        ]
+        if uncoverable:
+            out.append(
+                Finding(
+                    "cv-uncoverable-substrate-row",
+                    "%s declares basis: substrate carrying a missing or "
+                    "out-of-vocabulary %s, so no coverage requirement can cover it"
+                    % (where, " and ".join(uncoverable)),
+                )
+            )
+
         refs = row.get("observationRefs")
         if not isinstance(refs, list) or not refs:
             out.append(Finding("cv-refs-empty", "%s carries basis: substrate with no observationRefs" % where))
@@ -378,10 +513,13 @@ def check_coverage_validity(statement):
             elif not record.binds:
                 out.append(Finding("cv-run-binding", "%s resolves %s, whose aeeRunBinding does not equal the derived run binding" % (where, record.where)))
 
+        # R2. "the weakest aeeMethod across its *covering* records". A
+        # moat-drop, an uncommitted-observation and an unrecognised kind all
+        # cover nothing, so none of them may weaken a row.
         strengths = [
             _METHOD_STRENGTH[r.method]
             for r in covering
-            if r.readable and r.method in _METHOD_STRENGTH
+            if r.readable and r.kind in COVERING_KINDS and r.method in _METHOD_STRENGTH
         ]
         if strengths and method in _METHOD_STRENGTH and _METHOD_STRENGTH[method] > min(strengths):
             out.append(Finding("cv-method-strength", "%s declares method %r, stronger than the weakest aeeMethod across the records it resolves" % (where, method)))

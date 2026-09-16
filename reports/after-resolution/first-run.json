@@ -1,0 +1,5409 @@
+{
+  "rows": [
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-1",
+        "aee-c-3",
+        "aee-c-12",
+        "aee-c-28",
+        "aee-c-50"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vcf20eae7df4f1f1b.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vcf20eae7df4f1f1b",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-7",
+        "aee-c-14",
+        "aee-c-26",
+        "aee-c-48",
+        "aee-c-63",
+        "aee-c-64",
+        "aee-c-65"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vcc938c6038536dcb.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vcc938c6038536dcb",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v02f2be8cd63828f4.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v02f2be8cd63828f4",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-1",
+        "aee-c-6"
+      ],
+      "expected_codes": null,
+      "expected_result": "degraded",
+      "expected_verdict": "valid",
+      "file": "statements/v393e5fb361cedaae.json",
+      "got_result": "degraded",
+      "got_verdict": "valid",
+      "id": "v393e5fb361cedaae",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-6"
+      ],
+      "expected_codes": null,
+      "expected_result": "degraded",
+      "expected_verdict": "valid",
+      "file": "statements/vcebc3fca7e54f763.json",
+      "got_result": "degraded",
+      "got_verdict": "valid",
+      "id": "vcebc3fca7e54f763",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-13",
+        "aee-c-66"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass_indirect",
+      "expected_verdict": "valid",
+      "file": "statements/vc8db427883cd80ea.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "vc8db427883cd80ea",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-31",
+        "aee-c-57"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass_indirect",
+      "expected_verdict": "valid",
+      "file": "statements/vc2782e6c3cbdb9b7.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "vc2782e6c3cbdb9b7",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-5",
+        "aee-c-44"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v51e9223d08fcc4e1.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v51e9223d08fcc4e1",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-4"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v87d0a19d4b41aafc.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v87d0a19d4b41aafc",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-43"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vea21d85d4e531e66.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vea21d85d4e531e66",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-15"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v097ad0cc5b7c0490.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v097ad0cc5b7c0490",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-16"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v12389306fa02ce0c.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v12389306fa02ce0c",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-32",
+        "aee-c-71"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v26db60a5d09ec82c.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v26db60a5d09ec82c",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-26"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v3bf3c0fa0e6a52b3.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v3bf3c0fa0e6a52b3",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-26"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/va1881488724114fd.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "va1881488724114fd",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-49"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vba7081ad0eae11bf.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vba7081ad0eae11bf",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-23"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v194265397248929b.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v194265397248929b",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-38",
+        "aee-c-61"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v79735e29bd3c1c55.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v79735e29bd3c1c55",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-35"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vfcb846afff2d6979.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vfcb846afff2d6979",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-36"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v550c91df0d36a218.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v550c91df0d36a218",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-73"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vfa152052ea49dfdb.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vfa152052ea49dfdb",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-68"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vdf9d432c5a63e441.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vdf9d432c5a63e441",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-34"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v05e2e6ba0093d37a.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v05e2e6ba0093d37a",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-33",
+        "aee-c-41"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vcf5a4601dee5c2ee.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vcf5a4601dee5c2ee",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-84"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v774eb1ad06e94311.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v774eb1ad06e94311",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-26"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v4130b125a1c2d5b1.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v4130b125a1c2d5b1",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-5",
+        "aee-c-42",
+        "aee-c-44"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v48542b44ffd26237.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v48542b44ffd26237",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-3",
+        "aee-c-52"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v085acd94abf21364.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v085acd94abf21364",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-24",
+        "aee-c-29",
+        "aee-c-30",
+        "aee-c-32"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass_indirect",
+      "expected_verdict": "valid",
+      "file": "statements/v9cc570167acf4ae8.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "v9cc570167acf4ae8",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-23",
+        "aee-c-45"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v0099f25838779fcc.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v0099f25838779fcc",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-13"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v3fbc377adbe6dcf1.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v3fbc377adbe6dcf1",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-5",
+        "aee-c-43"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v948fbb64b96197e6.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v948fbb64b96197e6",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-6"
+      ],
+      "expected_codes": null,
+      "expected_result": "degraded",
+      "expected_verdict": "valid",
+      "file": "statements/vc7a74e2cef5586ed.json",
+      "got_result": "degraded",
+      "got_verdict": "valid",
+      "id": "vc7a74e2cef5586ed",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vf720662dff34b8f5.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vf720662dff34b8f5",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-23",
+        "aee-c-45",
+        "aee-c-71"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v164cf7f3f529eaff.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v164cf7f3f529eaff",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vb2af33bb3cc0da77.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vb2af33bb3cc0da77",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-85"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass_indirect",
+      "expected_verdict": "valid",
+      "file": "statements/v4dfeab58a9cbdf24.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "v4dfeab58a9cbdf24",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-63",
+        "aee-c-85"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v9a886701250e5a06.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v9a886701250e5a06",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-93"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v5ec463cdbbe6dab5.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v5ec463cdbbe6dab5",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-93"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v0a8a7826e4499ff6.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v0a8a7826e4499ff6",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-93"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vdb34a3c9aca2ad5c.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vdb34a3c9aca2ad5c",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-60"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v44c5b469882b4a0e.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v44c5b469882b4a0e",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-31"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass_indirect",
+      "expected_verdict": "valid",
+      "file": "statements/v15e3a93a59a65391.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "v15e3a93a59a65391",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-14"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass_indirect",
+      "expected_verdict": "valid",
+      "file": "statements/vf1fcbad160189ca5.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "vf1fcbad160189ca5",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vf88590533f7b3599.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vf88590533f7b3599",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-100",
+        "aee-c-101",
+        "aee-c-102",
+        "aee-c-103"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v9383066da404cbda.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v9383066da404cbda",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-105"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v1b2d2d26efeb7835.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v1b2d2d26efeb7835",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vb9ffa071ee33678b.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vb9ffa071ee33678b",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-23",
+        "aee-c-45",
+        "aee-c-106",
+        "aee-c-107"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v7d2a79cb1ddc59a5.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v7d2a79cb1ddc59a5",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-100",
+        "aee-c-101",
+        "aee-c-102",
+        "aee-c-103"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vd1aa74416099f3f0.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vd1aa74416099f3f0",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-98",
+        "aee-c-100",
+        "aee-c-101",
+        "aee-c-102",
+        "aee-c-103",
+        "aee-c-104"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vda285efc96ac6e75.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vda285efc96ac6e75",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-14",
+        "aee-c-98",
+        "aee-c-100",
+        "aee-c-102",
+        "aee-c-103"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v73244f2068e58c68.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v73244f2068e58c68",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-23",
+        "aee-c-45",
+        "aee-c-73"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v7400cd757fd046e9.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v7400cd757fd046e9",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-100",
+        "aee-c-101",
+        "aee-c-102",
+        "aee-c-103"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v36fe88ae1da31194.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v36fe88ae1da31194",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-1"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/vd601fae914a58643.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "vd601fae914a58643",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-1"
+      ],
+      "expected_codes": null,
+      "expected_result": "fail",
+      "expected_verdict": "valid",
+      "file": "statements/v18bdbadef67b38f4.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v18bdbadef67b38f4",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-73"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v4f78835e75e8a400.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v4f78835e75e8a400",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/va4d6b048f2e9cc5f.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "va4d6b048f2e9cc5f",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-73"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/v9aa8ed2b3bfb4042.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v9aa8ed2b3bfb4042",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-73"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vd024efc41945fe54.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vd024efc41945fe54",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": null,
+      "expected_result": "pass",
+      "expected_verdict": "valid",
+      "file": "statements/vb835ee95031d6e97.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vb835ee95031d6e97",
+      "kind": "accept",
+      "result_match": true,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-token"
+      ],
+      "conditions": [
+        "aee-c-1",
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-vocabulary",
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf35474dd75d6b14a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf35474dd75d6b14a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vcb23d2c4509c9daf.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vcb23d2c4509c9daf",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-4"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v27930cf8d66b2b90.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v27930cf8d66b2b90",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-5"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v621854cac9e3b77b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v621854cac9e3b77b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2",
+        "aee-c-6"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va1d44b528c20101b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va1d44b528c20101b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/ve7d572bb5e39fe9e.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "ve7d572bb5e39fe9e",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/ve7fa00ccb08c9987.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "ve7fa00ccb08c9987",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-token"
+      ],
+      "conditions": [
+        "aee-c-1",
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-vocabulary",
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v87a339f53f689d9f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v87a339f53f689d9f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v14d9059f14696fe6.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v14d9059f14696fe6",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-2"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vaec3b6d70dfbbc47.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vaec3b6d70dfbbc47",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-refs-empty",
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-10",
+        "aee-c-12"
+      ],
+      "expected_codes": [
+        "refs-empty",
+        "caught-row-uncovered"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v131478f1be775746.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v131478f1be775746",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range"
+      ],
+      "conditions": [
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "ref-out-of-range"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vbe54956653060e0c.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vbe54956653060e0c",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range"
+      ],
+      "conditions": [
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "ref-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va06ffeb35650b992.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va06ffeb35650b992",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class",
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-12"
+      ],
+      "expected_codes": [
+        "caught-row-uncovered"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v59e16f48a28bec9d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v59e16f48a28bec9d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class",
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-13"
+      ],
+      "expected_codes": [
+        "reconstructed-row-uncovered"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf362be6b8302b409.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf362be6b8302b409",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-14"
+      ],
+      "expected_codes": [
+        "clean-row-uncovered"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/ve025b4bed04cfb68.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "ve025b4bed04cfb68",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-14"
+      ],
+      "expected_codes": [
+        "clean-row-uncovered"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v132435a4d6d10043.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v132435a4d6d10043",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range"
+      ],
+      "conditions": [
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "ref-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va507b8f9a9cc675c.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va507b8f9a9cc675c",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-canonical",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-17"
+      ],
+      "expected_codes": [
+        "payload-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v85caf3c6f7516ba2.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v85caf3c6f7516ba2",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v61efcc48543d8cea.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v61efcc48543d8cea",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v94d877ffcc3a30fe.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v94d877ffcc3a30fe",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-media-type",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-19"
+      ],
+      "expected_codes": [
+        "payload-media-type"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vbea799eb2cd2852c.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vbea799eb2cd2852c",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-bmp",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-87"
+      ],
+      "expected_codes": [
+        "payload-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v9d1f7c44f94cb929.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v9d1f7c44f94cb929",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-reserved",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-20"
+      ],
+      "expected_codes": [
+        "payload-missing-reserved"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v08584c6c7d501f77.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v08584c6c7d501f77",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-reserved",
+        "cv-record-class",
+        "cv-payload-parse"
+      ],
+      "conditions": [
+        "aee-c-20"
+      ],
+      "expected_codes": [
+        "payload-missing-reserved"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6c900389fd3f9a1b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v6c900389fd3f9a1b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-reserved",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-20"
+      ],
+      "expected_codes": [
+        "payload-missing-reserved"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2c7c29f498719ddf.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2c7c29f498719ddf",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-62"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0cf043f1bc09bccb.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0cf043f1bc09bccb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-method-strength"
+      ],
+      "conditions": [
+        "aee-c-23"
+      ],
+      "expected_codes": [
+        "method-cap-exceeded"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v5a93b650d229c1bf.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v5a93b650d229c1bf",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-75",
+        "aee-c-22"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v89cc66f8a44a1977.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v89cc66f8a44a1977",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-75"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v081d9eeddbd5634f.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v081d9eeddbd5634f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "cv-method-strength"
+      ],
+      "conditions": [
+        "aee-c-23",
+        "aee-c-45"
+      ],
+      "expected_codes": [
+        "method-cap-exceeded"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v093aa7f10f378951.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v093aa7f10f378951",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-batch-root",
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-24"
+      ],
+      "expected_codes": [
+        "batch-root-missing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vdad33f132b5b08ef.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vdad33f132b5b08ef",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-25"
+      ],
+      "expected_codes": [
+        "batch-root-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v28b0cf874ea02de1.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v28b0cf874ea02de1",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-26"
+      ],
+      "expected_codes": [
+        "batch-root-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v4a2da6bda218a1fb.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v4a2da6bda218a1fb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-27"
+      ],
+      "expected_codes": [
+        "batch-root-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0ec069decbfbc59f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0ec069decbfbc59f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-29"
+      ],
+      "expected_codes": [
+        "duplicate-record"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vd70d546cef512eff.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vd70d546cef512eff",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-30"
+      ],
+      "expected_codes": [
+        "batch-root-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v44881386e8e5c467.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v44881386e8e5c467",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range",
+        "cv-record-class",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-31",
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "records-absent",
+        "ref-out-of-range"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v02fe83a8a13cd303.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v02fe83a8a13cd303",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-31"
+      ],
+      "expected_codes": [
+        "batch-root-orphaned"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v577011f7dd9a08fe.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "v577011f7dd9a08fe",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-30",
+        "aee-c-24"
+      ],
+      "expected_codes": [
+        "batch-root-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v090ca9dadcff9e20.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v090ca9dadcff9e20",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-batch-root"
+      ],
+      "conditions": [
+        "aee-c-29"
+      ],
+      "expected_codes": [
+        "duplicate-record",
+        "record-undecodable"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7622b2c58c2e272d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7622b2c58c2e272d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-uncoverable-substrate-row"
+      ],
+      "conditions": [
+        "aee-c-44",
+        "aee-c-5",
+        "aee-c-42"
+      ],
+      "expected_codes": [
+        "fail-closed-substrate-row"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vcac966c6b2ba6295.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vcac966c6b2ba6295",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-row-member"
+      ],
+      "conditions": [
+        "aee-c-47"
+      ],
+      "expected_codes": [
+        "malformed-missing-actual-layer"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v9df7fc4321c024c5.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v9df7fc4321c024c5",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-clean-row-actual-layer"
+      ],
+      "conditions": [
+        "aee-c-48"
+      ],
+      "expected_codes": [
+        "clean-row-layer-not-none"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v8b78d15e86851925.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v8b78d15e86851925",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-clean-row-actual-layer"
+      ],
+      "conditions": [
+        "aee-c-48"
+      ],
+      "expected_codes": [
+        "clean-row-layer-not-none"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf44cfce2b3744894.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf44cfce2b3744894",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-clean-row-actual-layer"
+      ],
+      "conditions": [
+        "aee-c-48"
+      ],
+      "expected_codes": [
+        "clean-row-layer-not-none"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v692f9605520a617d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v692f9605520a617d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-4",
+        "aee-c-44"
+      ],
+      "expected_codes": [
+        "fail-closed-substrate-row"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v539055896bf3a954.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v539055896bf3a954",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "cv-uncoverable-substrate-row"
+      ],
+      "conditions": [
+        "aee-c-5",
+        "aee-c-42",
+        "aee-c-44"
+      ],
+      "expected_codes": [
+        "fail-closed-substrate-row"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v84f40e16772e5f91.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v84f40e16772e5f91",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-88"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3eb268f467674845.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v3eb268f467674845",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "wf-missing-member",
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-51"
+      ],
+      "expected_codes": [
+        "vocabulary-missing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v089e746847cd0af2.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v089e746847cd0af2",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-caught-subset"
+      ],
+      "conditions": [
+        "aee-c-52"
+      ],
+      "expected_codes": [
+        "vocabulary-caught-not-subset"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v109b606952f6ee6c.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v109b606952f6ee6c",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-array-order"
+      ],
+      "conditions": [
+        "aee-c-53"
+      ],
+      "expected_codes": [
+        "vocabulary-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v62e5552063975fc9.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v62e5552063975fc9",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-array-duplicate"
+      ],
+      "conditions": [
+        "aee-c-53"
+      ],
+      "expected_codes": [
+        "vocabulary-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vded1d495746a647a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vded1d495746a647a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-vocabulary-digest"
+      ],
+      "conditions": [
+        "aee-c-54"
+      ],
+      "expected_codes": [
+        "vocabulary-digest-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7ecdfe261d1dcd84.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7ecdfe261d1dcd84",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-run-entropy",
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-57"
+      ],
+      "expected_codes": [
+        "run-entropy-missing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3d70f1cdb9050246.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3d70f1cdb9050246",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-58"
+      ],
+      "expected_codes": [
+        "subject-cardinality"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6f6941efba2cbe28.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v6f6941efba2cbe28",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-59"
+      ],
+      "expected_codes": [
+        "digest-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v495bb03f306ef6aa.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v495bb03f306ef6aa",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-59"
+      ],
+      "expected_codes": [
+        "digest-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vbd93d974436e11eb.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vbd93d974436e11eb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-4",
+        "aee-c-44",
+        "aee-c-53"
+      ],
+      "expected_codes": [
+        "fail-closed-substrate-row"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va54b6faefcfb1f9e.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "va54b6faefcfb1f9e",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "wf-subject",
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-59",
+        "aee-c-60"
+      ],
+      "expected_codes": [
+        "subject-sha256-missing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v886b2a92cf14bd54.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v886b2a92cf14bd54",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-vocabulary-bmp"
+      ],
+      "conditions": [
+        "aee-c-86"
+      ],
+      "expected_codes": [
+        "vocabulary-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v4fb9c4caa3a2cd8d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v4fb9c4caa3a2cd8d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6b15bd108cb9c27a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v6b15bd108cb9c27a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-armed-after-issued"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v05f8f5c8bb0b1d43.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v05f8f5c8bb0b1d43",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-posture-digest",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-63",
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing",
+        "sealed-covers-nothing",
+        "clean-row-uncovered"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb704d6c2420a1c43.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb704d6c2420a1c43",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-method",
+        "cv-method-strength"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb730e62ac8f072b0.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb730e62ac8f072b0",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-64"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc994d0402bf6b129.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc994d0402bf6b129",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-64"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1471516f09370430.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1471516f09370430",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vea5ff2dabe340db7.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vea5ff2dabe340db7",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vab69ab3304958ebd.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vab69ab3304958ebd",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v9982646034457eb6.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v9982646034457eb6",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-posture-digest",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v9d0f50db6d287d35.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v9d0f50db6d287d35",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-method"
+      ],
+      "conditions": [
+        "aee-c-66"
+      ],
+      "expected_codes": [
+        "examination-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v205d5ea1079eb8e5.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v205d5ea1079eb8e5",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-68"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc05cf94374f0d0d6.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc05cf94374f0d0d6",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-71"
+      ],
+      "expected_codes": [
+        "record-kind-unknown-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v5dcc150714259e09.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v5dcc150714259e09",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-64"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6a727606acc4b146.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v6a727606acc4b146",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-64",
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v73659435d1998490.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v73659435d1998490",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-posture-digest",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc79ff8c5db77cc00.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc79ff8c5db77cc00",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1b0b0cafb5ee8d08.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1b0b0cafb5ee8d08",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-58"
+      ],
+      "expected_codes": [
+        "subject-cardinality"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v423dab49f4ed4d29.json",
+      "got_result": "pass_indirect",
+      "got_verdict": "valid",
+      "id": "v423dab49f4ed4d29",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "wf-duplicate-attack-id"
+      ],
+      "conditions": [
+        "aee-c-90"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf14f5310b2f02875.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf14f5310b2f02875",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-coverage-partition"
+      ],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v70e970d18ae52833.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v70e970d18ae52833",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-chain-members"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vef2571e9001d7bd1.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vef2571e9001d7bd1",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-chain-members"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3cf298b019a0405f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3cf298b019a0405f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-chain-members"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2bac3fa36d7a5947.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2bac3fa36d7a5947",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-chain-members"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v8a7008d1673711a9.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v8a7008d1673711a9",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-chain-members"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v4360d4e15f84145f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v4360d4e15f84145f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-array-order"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v04993666ec44cda9.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v04993666ec44cda9",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-chain-members"
+      ],
+      "conditions": [
+        "aee-c-89"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v8a7532ae4cffa163.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v8a7532ae4cffa163",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range"
+      ],
+      "conditions": [
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "ref-out-of-range"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3300d78454ab852f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3300d78454ab852f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range"
+      ],
+      "conditions": [
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "ref-out-of-range"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc19ea5aaacc5b72a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc19ea5aaacc5b72a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-observation-ref-range"
+      ],
+      "conditions": [
+        "aee-c-11"
+      ],
+      "expected_codes": [
+        "ref-out-of-range"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1a3d0ce04c3f7524.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1a3d0ce04c3f7524",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v5155dde01a4538fd.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v5155dde01a4538fd",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-predicate-type"
+      ],
+      "conditions": [
+        "aee-c-77"
+      ],
+      "expected_codes": [
+        "predicate-type-unsupported"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v8a866332628b4b6f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v8a866332628b4b6f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-missing-member"
+      ],
+      "conditions": [
+        "aee-c-78"
+      ],
+      "expected_codes": [
+        "environment-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6275ec117f5e7e99.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v6275ec117f5e7e99",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-corpus-digest"
+      ],
+      "conditions": [
+        "aee-c-79"
+      ],
+      "expected_codes": [
+        "corpus-digest-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v02fd1bc1d7916002.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v02fd1bc1d7916002",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-manifest-class-overlap"
+      ],
+      "conditions": [
+        "aee-c-80"
+      ],
+      "expected_codes": [
+        "manifest-duplicate-attack"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3b58f7a2e30d8cad.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3b58f7a2e30d8cad",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-unknown-attack-id",
+        "wf-coverage-integrity"
+      ],
+      "conditions": [
+        "aee-c-81",
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "row-attack-unknown",
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v210a8e2d17bfcc47.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v210a8e2d17bfcc47",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-coverage-integrity",
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vaf114f3145d4a55a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vaf114f3145d4a55a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-coverage-integrity"
+      ],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vbbbcb6a491ac43c0.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vbbbcb6a491ac43c0",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-coverage-partition"
+      ],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v212f439c82b123ed.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v212f439c82b123ed",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v5a842871df5bfe33.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v5a842871df5bfe33",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb3c92d4ecb62bbfb.json",
+      "got_result": "degraded",
+      "got_verdict": "valid",
+      "id": "vb3c92d4ecb62bbfb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-82"
+      ],
+      "expected_codes": [
+        "coverage-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/ved230b46692c0ada.json",
+      "got_result": "degraded",
+      "got_verdict": "valid",
+      "id": "ved230b46692c0ada",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v5717f72827e39413.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v5717f72827e39413",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v198c19b52cf8890e.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v198c19b52cf8890e",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v86f3484735f41acb.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v86f3484735f41acb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf5599bb2dbe66e12.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf5599bb2dbe66e12",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vbc7012fb2fcbf1f8.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vbc7012fb2fcbf1f8",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb705b260669aedc7.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb705b260669aedc7",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vdef377fb4f572b4d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vdef377fb4f572b4d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v5e14357c80f6239b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v5e14357c80f6239b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v08251931ec038e91.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v08251931ec038e91",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v83f4b7fe6068ef86.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v83f4b7fe6068ef86",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "ijson-profile"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "statement-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va501d76c995de6d3.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va501d76c995de6d3",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-payload-parse",
+        "cv-record-class",
+        "cv-payload-parse",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-18"
+      ],
+      "expected_codes": [
+        "payload-not-ijson"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0e731123ead5b96e.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0e731123ead5b96e",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-signatures"
+      ],
+      "conditions": [
+        "aee-c-91"
+      ],
+      "expected_codes": [
+        "record-signatures-empty"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vca61adf35d265632.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vca61adf35d265632",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-signatures"
+      ],
+      "conditions": [
+        "aee-c-91"
+      ],
+      "expected_codes": [
+        "record-signatures-empty"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/ve0e5dddf8f3b812a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "ve0e5dddf8f3b812a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-manifest-floor"
+      ],
+      "conditions": [
+        "aee-c-92"
+      ],
+      "expected_codes": [
+        "corpus-manifest-no-attacks"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3418101227718535.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3418101227718535",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-manifest-floor"
+      ],
+      "conditions": [
+        "aee-c-92"
+      ],
+      "expected_codes": [
+        "corpus-manifest-no-attacks"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v22f545b6ff400646.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v22f545b6ff400646",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-19"
+      ],
+      "expected_codes": [
+        "record-undecodable"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v4ff6cb70764bf703.json",
+      "got_result": "fail",
+      "got_verdict": "valid",
+      "id": "v4ff6cb70764bf703",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "wf-missing-member"
+      ],
+      "conditions": [
+        "aee-c-83"
+      ],
+      "expected_codes": [
+        "coverage-missing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7236a3440b6a398a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7236a3440b6a398a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-84"
+      ],
+      "expected_codes": [
+        "member-spelling"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3c3a76f63bf8dda8.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v3c3a76f63bf8dda8",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "wf-timestamp-profile"
+      ],
+      "conditions": [
+        "aee-c-85"
+      ],
+      "expected_codes": [
+        "issued-at-missing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vd873c2f37814b8f8.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vd873c2f37814b8f8",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-timestamp-profile"
+      ],
+      "conditions": [
+        "aee-c-85"
+      ],
+      "expected_codes": [
+        "issued-at-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2729ba35eb041b05.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2729ba35eb041b05",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-missing-member"
+      ],
+      "conditions": [
+        "aee-c-78"
+      ],
+      "expected_codes": [
+        "environment-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb2f1fb954c994515.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb2f1fb954c994515",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-missing-member"
+      ],
+      "conditions": [
+        "aee-c-78"
+      ],
+      "expected_codes": [
+        "environment-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2adb319fc7515885.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2adb319fc7515885",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-missing-member"
+      ],
+      "conditions": [
+        "aee-c-78"
+      ],
+      "expected_codes": [
+        "environment-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v8966a040c3decefc.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v8966a040c3decefc",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-statement-type"
+      ],
+      "conditions": [
+        "aee-c-77"
+      ],
+      "expected_codes": [
+        "statement-type-unsupported"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2be8b19383a5c613.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2be8b19383a5c613",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3c527c28aa2da8db.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3c527c28aa2da8db",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-63"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v65fa8117aa487fbe.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v65fa8117aa487fbe",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-timestamp-profile"
+      ],
+      "conditions": [
+        "aee-c-85"
+      ],
+      "expected_codes": [
+        "issued-at-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc9f401685f448104.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc9f401685f448104",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-timestamp-profile"
+      ],
+      "conditions": [
+        "aee-c-85"
+      ],
+      "expected_codes": [
+        "issued-at-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v28d48cc69a324b81.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v28d48cc69a324b81",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-timestamp-profile"
+      ],
+      "conditions": [
+        "aee-c-85"
+      ],
+      "expected_codes": [
+        "issued-at-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7d4d7d92a346c7a5.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7d4d7d92a346c7a5",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-posture-vocabulary"
+      ],
+      "conditions": [
+        "aee-c-93"
+      ],
+      "expected_codes": [
+        "posture-vocabulary"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1d1ba5041819e108.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1d1ba5041819e108",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-posture-vocabulary"
+      ],
+      "conditions": [
+        "aee-c-93"
+      ],
+      "expected_codes": [
+        "posture-vocabulary"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc0340fb3e51cb2b3.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc0340fb3e51cb2b3",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-posture-vocabulary"
+      ],
+      "conditions": [
+        "aee-c-93"
+      ],
+      "expected_codes": [
+        "posture-vocabulary"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va729442fd496e59a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va729442fd496e59a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc8e3b44ea967460b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc8e3b44ea967460b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v51dd58a56a16716d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v51dd58a56a16716d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v77fb0077815e78cc.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v77fb0077815e78cc",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-clean-row-interception"
+      ],
+      "conditions": [
+        "aee-c-94"
+      ],
+      "expected_codes": [
+        "clean-row-contradicted"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v26f7c477598f8207.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v26f7c477598f8207",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class",
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-95"
+      ],
+      "expected_codes": [
+        "caught-row-uncovered",
+        "interception-record-orphaned"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2d1f9da3e912c63a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2d1f9da3e912c63a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-96"
+      ],
+      "expected_codes": [
+        "sealed-record-absent"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vdec5ea66f3ff63d5.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vdec5ea66f3ff63d5",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-97"
+      ],
+      "expected_codes": [
+        "observed-set-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc66a19c407888f78.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc66a19c407888f78",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-97"
+      ],
+      "expected_codes": [
+        "observed-set-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc2432d962eedc6a8.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc2432d962eedc6a8",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-97"
+      ],
+      "expected_codes": [
+        "observed-set-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vea599b89dfdc6a0a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vea599b89dfdc6a0a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-observed-attacks-row"
+      ],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": [
+        "observed-attack-uncaught"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v98eef7d31c9870b6.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v98eef7d31c9870b6",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-assessed-subset"
+      ],
+      "conditions": [
+        "aee-c-99"
+      ],
+      "expected_codes": [
+        "assessed-set-exceeds-declaration"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v559ea641021fea75.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v559ea641021fea75",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-observed-attacks-row"
+      ],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": [
+        "observed-attack-uncaught"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v41de149d50373e9e.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v41de149d50373e9e",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-observed-attacks-row"
+      ],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": [
+        "observed-attack-uncaught"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v320cc6344593c639.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v320cc6344593c639",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-coverage-integrity",
+        "cv-observed-attacks-row"
+      ],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": [
+        "coverage-incomplete",
+        "observed-attack-uncaught"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vde0891384c1018ae.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vde0891384c1018ae",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-assessed-subset"
+      ],
+      "conditions": [
+        "aee-c-99"
+      ],
+      "expected_codes": [
+        "assessed-set-exceeds-declaration"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vfae885f5e5f78197.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vfae885f5e5f78197",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class",
+        "cv-pinned-no-interception"
+      ],
+      "conditions": [
+        "aee-c-100"
+      ],
+      "expected_codes": [
+        "caught-row-uncovered",
+        "attribution-pinned-recordless"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v99fb4ac5cb385049.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v99fb4ac5cb385049",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-no-expectation"
+      ],
+      "conditions": [
+        "aee-c-101"
+      ],
+      "expected_codes": [
+        "attribution-unpinnable"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va246c9dbdf73e8cf.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va246c9dbdf73e8cf",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-commitment"
+      ],
+      "conditions": [
+        "aee-c-102"
+      ],
+      "expected_codes": [
+        "attribution-pin-unmatched"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v4730792ca7a8691e.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v4730792ca7a8691e",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-expected-payloads"
+      ],
+      "conditions": [
+        "aee-c-103"
+      ],
+      "expected_codes": [
+        "manifest-expected-payloads-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6662e73ba03dfd36.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v6662e73ba03dfd36",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-array-order"
+      ],
+      "conditions": [
+        "aee-c-103"
+      ],
+      "expected_codes": [
+        "manifest-expected-payloads-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v2dd443f340e8a1c7.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v2dd443f340e8a1c7",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-expected-payloads"
+      ],
+      "conditions": [
+        "aee-c-103"
+      ],
+      "expected_codes": [
+        "manifest-expected-payloads-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf8029fa61d5f1b13.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf8029fa61d5f1b13",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-expected-payloads"
+      ],
+      "conditions": [
+        "aee-c-103"
+      ],
+      "expected_codes": [
+        "manifest-expected-payloads-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1a8005dac6c3e806.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1a8005dac6c3e806",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-104"
+      ],
+      "expected_codes": [
+        "payload-commitment-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc7111b58eecb4d0c.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc7111b58eecb4d0c",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-104"
+      ],
+      "expected_codes": [
+        "payload-commitment-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf6717a2ded406b68.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf6717a2ded406b68",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-104"
+      ],
+      "expected_codes": [
+        "payload-commitment-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0ac6d948f2af5b6f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0ac6d948f2af5b6f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-104"
+      ],
+      "expected_codes": [
+        "payload-missing-reserved"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v244bd03c59cd03cc.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v244bd03c59cd03cc",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-uncoverable-substrate-row"
+      ],
+      "conditions": [
+        "aee-c-105"
+      ],
+      "expected_codes": [
+        "fail-closed-substrate-row"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v590d80afd6a67f0f.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v590d80afd6a67f0f",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-uncoverable-substrate-row"
+      ],
+      "conditions": [
+        "aee-c-105"
+      ],
+      "expected_codes": [
+        "fail-closed-substrate-row"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb370622a59690b75.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb370622a59690b75",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-105"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v9d92e2e234987c76.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v9d92e2e234987c76",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-105"
+      ],
+      "expected_codes": [
+        "result-recompute-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v38dc376c7746314b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v38dc376c7746314b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-95"
+      ],
+      "expected_codes": [
+        "interception-record-orphaned"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vbc974f64e9105f97.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vbc974f64e9105f97",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-no-interception"
+      ],
+      "conditions": [
+        "aee-c-100"
+      ],
+      "expected_codes": [
+        "attribution-pinned-recordless"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vacd28b5127a54254.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vacd28b5127a54254",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-97"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v42c1c063e3ecf305.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v42c1c063e3ecf305",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v81c4d6a0592c51d9.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v81c4d6a0592c51d9",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member",
+        "cv-observed-attacks-row"
+      ],
+      "conditions": [
+        "aee-c-98"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1b77d64eede0add3.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1b77d64eede0add3",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-99"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v84c52616decf0653.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v84c52616decf0653",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-orphan-interception"
+      ],
+      "conditions": [
+        "aee-c-95"
+      ],
+      "expected_codes": [
+        "interception-record-orphaned"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v37b29638601ce5ba.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v37b29638601ce5ba",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-array-order"
+      ],
+      "conditions": [
+        "aee-c-99"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va763626ffc99b681.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va763626ffc99b681",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-99"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vea9deaa7d7ef8934.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vea9deaa7d7ef8934",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-106"
+      ],
+      "expected_codes": [
+        "moat-drop-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0639562eb10e87fb.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0639562eb10e87fb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-107"
+      ],
+      "expected_codes": [
+        "uncommitted-observation-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vece82b6a9a07327a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vece82b6a9a07327a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-commitment",
+        "cv-pinned-commitment"
+      ],
+      "conditions": [
+        "aee-c-102"
+      ],
+      "expected_codes": [
+        "attribution-pin-unmatched"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v6ed1e2626b2af5ad.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v6ed1e2626b2af5ad",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-commitment"
+      ],
+      "conditions": [
+        "aee-c-102"
+      ],
+      "expected_codes": [
+        "attribution-pin-unmatched"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1e9751e918994a98.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1e9751e918994a98",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-expected-payloads"
+      ],
+      "conditions": [
+        "aee-c-103"
+      ],
+      "expected_codes": [
+        "manifest-expected-payloads-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v3772d801e5cae557.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v3772d801e5cae557",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-expected-payloads"
+      ],
+      "conditions": [
+        "aee-c-103"
+      ],
+      "expected_codes": [
+        "manifest-expected-payloads-malformed"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v113349f8afb946bf.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v113349f8afb946bf",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-commitment"
+      ],
+      "conditions": [
+        "aee-c-102"
+      ],
+      "expected_codes": [
+        "attribution-pin-unmatched"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1043dbabae5f8ace.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v1043dbabae5f8ace",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-pinned-no-expectation"
+      ],
+      "conditions": [
+        "aee-c-101"
+      ],
+      "expected_codes": [
+        "attribution-unpinnable"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0e22ac9c30338ad5.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0e22ac9c30338ad5",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-class",
+        "cv-pinned-no-interception"
+      ],
+      "conditions": [
+        "aee-c-100"
+      ],
+      "expected_codes": [
+        "caught-row-uncovered",
+        "attribution-pinned-recordless"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v21e964dddeba0d08.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v21e964dddeba0d08",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-method",
+        "cv-method-strength"
+      ],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7f62f32c0ccda2fb.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7f62f32c0ccda2fb",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v1ec06de44fe4000d.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v1ec06de44fe4000d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "cv-posture-digest",
+        "cv-record-class"
+      ],
+      "conditions": [
+        "aee-c-65"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7f35f318b31ca92a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7f35f318b31ca92a",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-vocabulary-shape",
+        "wf-result-recompute"
+      ],
+      "conditions": [
+        "aee-c-51"
+      ],
+      "expected_codes": [
+        "vocabulary-not-canonical"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v300ab22f5f2fe523.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v300ab22f5f2fe523",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "wf-manifest-shape"
+      ],
+      "conditions": [
+        "aee-c-78"
+      ],
+      "expected_codes": [
+        "environment-incomplete"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v03547f8918e0d7dc.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v03547f8918e0d7dc",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v59b24935f1fa8a4b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v59b24935f1fa8a4b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v755ceccd7c4da990.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v755ceccd7c4da990",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v4da2f99ac2897154.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v4da2f99ac2897154",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v80e2a3fba582ed4d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v80e2a3fba582ed4d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vd7be865fc69eacc2.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vd7be865fc69eacc2",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-posture-digest"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7258b9f4ed52a08d.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7258b9f4ed52a08d",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vfb979cb9ce40f1be.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vfb979cb9ce40f1be",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7fefd467a21566ca.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7fefd467a21566ca",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v0d364d8f9d815092.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v0d364d8f9d815092",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-method"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/veb0e5002608390cc.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "veb0e5002608390cc",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb1337e5ecad985c2.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "vb1337e5ecad985c2",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "cv-record-member",
+        "cv-observed-set"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vd9041fbad8a6b721.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vd9041fbad8a6b721",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/va62d3b1847c9e0bd.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "va62d3b1847c9e0bd",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member",
+        "cv-observed-attacks-row"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "sealed-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v47fc43d883b16a9b.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v47fc43d883b16a9b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-member"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "arming-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vc325d584b58dcc99.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vc325d584b58dcc99",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-method"
+      ],
+      "conditions": [
+        "aee-c-108"
+      ],
+      "expected_codes": [
+        "examination-covers-nothing"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb877a9c1703557b2.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb877a9c1703557b2",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-seal-covers-nothing",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-96"
+      ],
+      "expected_codes": [
+        "sealed-record-absent"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vd538496f284b4761.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vd538496f284b4761",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vb79f5508ae0c97d4.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vb79f5508ae0c97d4",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [],
+      "conditions": [
+        "aee-c-58"
+      ],
+      "expected_codes": [
+        "subject-cardinality"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v399c693cbf60143b.json",
+      "got_result": "pass",
+      "got_verdict": "valid",
+      "id": "v399c693cbf60143b",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": false
+    },
+    {
+      "codes": [
+        "cv-run-binding",
+        "cv-run-binding",
+        "cv-sealed-existence"
+      ],
+      "conditions": [
+        "aee-c-22",
+        "aee-c-60"
+      ],
+      "expected_codes": [
+        "run-binding-mismatch"
+      ],
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/vf6d46cca59bd2748.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "vf6d46cca59bd2748",
+      "kind": "reject",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-signatures"
+      ],
+      "conditions": [
+        "aee-c-91"
+      ],
+      "expected_codes": null,
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v78efec12284a51d6.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v78efec12284a51d6",
+      "kind": "indeterminate",
+      "result_match": null,
+      "verdict_match": true
+    },
+    {
+      "codes": [
+        "cv-record-signatures"
+      ],
+      "conditions": [
+        "aee-c-91"
+      ],
+      "expected_codes": null,
+      "expected_result": null,
+      "expected_verdict": "invalid",
+      "file": "statements/v7cd4ebe08eb1605a.json",
+      "got_result": null,
+      "got_verdict": "invalid",
+      "id": "v7cd4ebe08eb1605a",
+      "kind": "indeterminate",
+      "result_match": null,
+      "verdict_match": true
+    }
+  ],
+  "summary": {
+    "accepts": 61,
+    "divergences": 17,
+    "divergent_conditions": {
+      "aee-c-108": [
+        "vb1337e5ecad985c2"
+      ],
+      "aee-c-19": [
+        "v4ff6cb70764bf703"
+      ],
+      "aee-c-31": [
+        "v577011f7dd9a08fe"
+      ],
+      "aee-c-4": [
+        "v539055896bf3a954",
+        "va54b6faefcfb1f9e"
+      ],
+      "aee-c-44": [
+        "v539055896bf3a954",
+        "va54b6faefcfb1f9e"
+      ],
+      "aee-c-53": [
+        "va54b6faefcfb1f9e"
+      ],
+      "aee-c-58": [
+        "v6f6941efba2cbe28",
+        "v423dab49f4ed4d29",
+        "v399c693cbf60143b"
+      ],
+      "aee-c-59": [
+        "v495bb03f306ef6aa",
+        "vbd93d974436e11eb"
+      ],
+      "aee-c-65": [
+        "v1ec06de44fe4000d"
+      ],
+      "aee-c-75": [
+        "v081d9eeddbd5634f"
+      ],
+      "aee-c-82": [
+        "v5a842871df5bfe33",
+        "vb3c92d4ecb62bbfb",
+        "ved230b46692c0ada"
+      ],
+      "aee-c-84": [
+        "v3c3a76f63bf8dda8"
+      ],
+      "aee-c-88": [
+        "v3eb268f467674845"
+      ]
+    },
+    "fully_matching": 255,
+    "result_matches": 61,
+    "vectors": 272,
+    "verdict_matches": 255
+  },
+  "taken": "2026-09-16T12:41:33Z"
+}

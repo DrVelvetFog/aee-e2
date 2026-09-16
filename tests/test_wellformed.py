@@ -193,15 +193,39 @@ class TestExpectedPayloads(unittest.TestCase):
 
 class TestRows(unittest.TestCase):
     def test_missing_required_member(self):
-        for member in ("attackId", "containmentObserved", "basis", "method", "attribution", "actualLayer"):
+        for member in ("attackId", "containmentObserved", "actualLayer"):
             r = f.row()
             del r[member]
             with self.subTest(member=member):
                 self.assertIn("wf-row-member", codes(f.statement(rows=[r], result="fail")))
 
-    def test_out_of_vocabulary_axis(self):
-        statement = f.statement(rows=[f.row(basis="hearsay")], result="fail")
-        self.assertIn("wf-row-vocabulary", codes(statement))
+    def test_a_missing_fail_closed_axis_is_not_a_well_formedness_fault(self):
+        # R1. basis, method and attribution are read by the recompute, so a
+        # missing one makes the row contribute fail and leaves the statement
+        # valid. Treating it as malformed is the actualLayer rule applied to
+        # the wrong members.
+        for member in ("basis", "method", "attribution"):
+            r = f.row()
+            del r[member]
+            with self.subTest(member=member):
+                self.assertEqual(check_wellformed(f.statement(rows=[r], result="fail")), [])
+
+    def test_an_out_of_vocabulary_axis_is_not_a_well_formedness_fault(self):
+        for member in ("basis", "method", "attribution"):
+            with self.subTest(member=member):
+                statement = f.statement(rows=[f.row(**{member: "hearsay"})], result="fail")
+                self.assertEqual(check_wellformed(statement), [])
+
+    def test_and_the_recompute_turns_those_rows_into_fail(self):
+        from aee.result import recompute_result
+
+        for row in (f.row(basis="hearsay"), f.row(method="inferred")):
+            with self.subTest(row=row):
+                statement = f.statement(rows=[row], result="fail")
+                self.assertEqual(
+                    recompute_result(statement["predicate"]).result, "fail"
+                )
+                self.assertEqual(check_wellformed(statement), [])
 
     def test_duplicate_attack_id(self):
         statement = f.statement(rows=[f.row(), f.row()])
@@ -375,13 +399,13 @@ class TestDoesNotAssert(unittest.TestCase):
 class TestAccumulation(unittest.TestCase):
     def test_every_broken_rule_is_reported_not_just_the_first(self):
         statement = f.statement(
-            rows=[f.row(basis="hearsay"), f.row(basis="hearsay")],
+            rows=[f.row(), f.row(attack_id="CO-OTHER")],
             result="ok",
             issued_at="nope",
         )
         found = set(codes(statement))
         self.assertLessEqual(
-            {"wf-row-vocabulary", "wf-duplicate-attack-id", "wf-result-token", "wf-timestamp-profile"},
+            {"wf-unknown-attack-id", "wf-coverage-integrity", "wf-result-token", "wf-timestamp-profile"},
             found,
         )
 

@@ -179,10 +179,14 @@ class TestKindConstraints(unittest.TestCase):
                                 aeeAssessedAttacks=["NOT-DECLARED"])
         self.assertIn("cv-record-member", codes(statement))
 
-    def test_sealed_still_armed_must_be_boolean(self):
-        statement = edit_record(f.substrate_statement(), SEALED,
-                                aeeStillArmed="yes")
-        self.assertIn("cv-record-member", codes(statement))
+    def test_sealed_still_armed_must_be_true(self):
+        # R4. Absent, non-boolean and false all mean the seal covers nothing,
+        # and the kind check reports it whether or not a row resolves the seal.
+        for value in ("yes", False, f.REMOVE):
+            with self.subTest(value=value):
+                statement = edit_record(f.substrate_statement(), SEALED,
+                                        aeeStillArmed=value)
+                self.assertIn("cv-seal-covers-nothing", codes(statement))
 
     def test_sealed_drop_count_must_be_an_integer(self):
         statement = edit_record(f.substrate_statement(), SEALED,
@@ -198,6 +202,125 @@ class TestKindConstraints(unittest.TestCase):
         # The record does not bind to the run, so the kind check does not reach
         # it; that is the documented gate. Bind it and the constraint applies.
         self.assertNotIn("cv-record-method", codes(statement))
+
+
+class TestUncoverableSubstrateRow(unittest.TestCase):
+    """R5. The other half of R1's line.
+
+    "A producer MUST NOT declare basis: substrate on a row it cannot cover
+    under the coverage validity requirements above: such a row is not merely
+    mislabeled, it makes the attestation invalid."
+    """
+
+    def substrate_row(self, **changes):
+        statement = copy.deepcopy(f.substrate_statement())
+        statement["predicate"]["attackResults"][0].update(changes)
+        return statement
+
+    def test_missing_method(self):
+        statement = copy.deepcopy(f.substrate_statement())
+        del statement["predicate"]["attackResults"][0]["method"]
+        self.assertIn("cv-uncoverable-substrate-row", codes(statement))
+
+    def test_out_of_vocabulary_method(self):
+        self.assertIn(
+            "cv-uncoverable-substrate-row",
+            codes(self.substrate_row(method="example.method-x")),
+        )
+
+    def test_missing_attribution(self):
+        statement = copy.deepcopy(f.substrate_statement())
+        del statement["predicate"]["attackResults"][0]["attribution"]
+        self.assertIn("cv-uncoverable-substrate-row", codes(statement))
+
+    def test_out_of_vocabulary_attribution(self):
+        self.assertIn(
+            "cv-uncoverable-substrate-row",
+            codes(self.substrate_row(attribution="example_strong")),
+        )
+
+    def test_an_artifact_row_is_untouched_by_this(self):
+        # The same value on a non-substrate row only drives the recompute's
+        # fail-closed arm, which leaves the statement valid. R1 and R5 are two
+        # halves of one line and must not collapse into each other.
+        statement = f.statement(rows=[f.row(method="example.method-x")], result="fail")
+        self.assertEqual(check_wellformed(statement), [])
+        self.assertEqual(check_coverage_validity(statement), [])
+
+
+class TestChainOfRunsMembers(unittest.TestCase):
+    """R3. Syntax only: nothing else normative reads these within one statement."""
+
+    def arming(self, **changes):
+        return edit_record(f.substrate_statement(), ARMING, **changes)
+
+    def test_a_well_formed_chain_is_accepted(self):
+        statement = self.arming(aeeRunSeq=1, aeeChainScope=["subject"])
+        self.assertEqual(check_coverage_validity(statement), [])
+
+    def test_a_later_run_carries_its_predecessor(self):
+        statement = self.arming(aeeRunSeq=2, aeeChainScope=["subject"],
+                                aeePrevRunBinding="ab" * 32)
+        self.assertEqual(check_coverage_validity(statement), [])
+
+    def test_sequence_must_be_positive(self):
+        for bad in (0, -1):
+            with self.subTest(sequence=bad):
+                statement = self.arming(aeeRunSeq=bad, aeeChainScope=["subject"])
+                self.assertIn("cv-chain-members", codes(statement))
+
+    def test_sequence_must_be_an_integer(self):
+        statement = self.arming(aeeRunSeq="1", aeeChainScope=["subject"])
+        self.assertIn("cv-chain-members", codes(statement))
+
+    def test_scope_is_required_whenever_the_sequence_is_present(self):
+        statement = self.arming(aeeRunSeq=1)
+        self.assertIn("cv-chain-members", codes(statement))
+
+    def test_scope_must_be_an_array(self):
+        statement = self.arming(aeeRunSeq=1, aeeChainScope="subject")
+        self.assertIn("cv-chain-members", codes(statement))
+
+    def test_scope_tokens_are_a_closed_vocabulary(self):
+        statement = self.arming(aeeRunSeq=1, aeeChainScope=["subject", "tenant"])
+        self.assertIn("cv-chain-members", codes(statement))
+
+    def test_scope_must_be_in_canonical_order(self):
+        statement = self.arming(aeeRunSeq=1, aeeChainScope=["subject", "corpus"])
+        self.assertIn("cv-array-order", codes(statement))
+
+    def test_scope_must_be_duplicate_free(self):
+        statement = self.arming(aeeRunSeq=1, aeeChainScope=["subject", "subject"])
+        self.assertIn("cv-array-duplicate", codes(statement))
+
+    def test_the_empty_scope_array_is_admissible(self):
+        # "the empty array is the single global per-key counter" -- it makes the
+        # chain rules vacuous and leaks run volume, which the spec says plainly,
+        # but it is not a syntax violation.
+        statement = self.arming(aeeRunSeq=1, aeeChainScope=[])
+        self.assertEqual(check_coverage_validity(statement), [])
+
+    def test_genesis_must_not_carry_a_predecessor(self):
+        statement = self.arming(aeeRunSeq=1, aeeChainScope=["subject"],
+                                aeePrevRunBinding="ab" * 32)
+        self.assertIn("cv-chain-members", codes(statement))
+
+    def test_a_later_run_must_carry_a_well_formed_predecessor(self):
+        for bad in ("EXAMPLE-NOT-64-HEX", "AB" * 32, f.REMOVE):
+            with self.subTest(value=bad):
+                statement = self.arming(aeeRunSeq=2, aeeChainScope=["subject"],
+                                        aeePrevRunBinding=bad)
+                self.assertIn("cv-chain-members", codes(statement))
+
+    def test_any_member_without_the_sequence_is_a_violation(self):
+        for member in ("aeePrevRunBinding", "aeeChainScope"):
+            value = "ab" * 32 if member == "aeePrevRunBinding" else ["subject"]
+            with self.subTest(member=member):
+                statement = self.arming(**{member: value})
+                self.assertIn("cv-chain-members", codes(statement))
+
+    def test_absent_entirely_is_fine(self):
+        self.assertEqual(check_coverage_validity(f.substrate_statement()), [])
 
 
 class TestSealCovering(unittest.TestCase):

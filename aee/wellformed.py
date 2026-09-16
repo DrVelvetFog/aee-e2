@@ -20,14 +20,7 @@ from .bindings import POSTURE_VALUES, corpus_digest, vocabulary_digest
 from .findings import Finding
 from .ijson import is_bmp_only
 from .jcs import sort_utf16
-from .result import (
-    ATTRIBUTION_VALUES,
-    BASIS_VALUES,
-    METHOD_VALUES,
-    RESULT_ORDER,
-    is_clean_row,
-    recompute_result,
-)
+from .result import RESULT_ORDER, is_clean_row, recompute_result
 from .timestamps import is_admissible
 
 __all__ = ["PREDICATE_TYPE", "STATEMENT_TYPE", "check_wellformed"]
@@ -44,14 +37,21 @@ _ENVIRONMENT_MEMBERS = (
     "networkPosture",
     "observationVocabulary",
 )
-_ROW_MEMBERS = (
-    "attackId",
-    "containmentObserved",
-    "basis",
-    "method",
-    "attribution",
-    "actualLayer",
-)
+# R1. basis, method and attribution are deliberately absent. A missing or
+# out-of-vocabulary value on any of the three makes the row contribute `fail`
+# to the recompute, which leaves the statement valid; it is not a
+# well-formedness fault. The spec draws the line under `actualLayer`:
+# "fail-closed-row semantics are reserved for members the recompute or the
+# documented consumer gating reads (containmentObserved, basis, method);
+# actualLayer is read by neither, so its absence is a malformed statement, not
+# weak evidence."
+#
+# `containmentObserved` is named in that same sentence and arguably belongs on
+# the same side of the line. It is left here because no vector in the pinned
+# corpus exercises the case, and the spec's own standard for an untested
+# reading is that it is "a candidate for the next vector, not a settled rule".
+# See RESOLUTION.md R1.
+_ROW_MEMBERS = ("attackId", "containmentObserved", "actualLayer")
 _HEX = set("0123456789abcdef")
 
 
@@ -309,21 +309,6 @@ def _check_rows(predicate, rows, declared, out):
                 out.append(
                     Finding("wf-row-member", "%s is missing %s" % (where, member))
                 )
-        for member, allowed in (
-            ("basis", BASIS_VALUES),
-            ("method", METHOD_VALUES),
-            ("attribution", ATTRIBUTION_VALUES),
-        ):
-            value = row.get(member)
-            if value is not None and value not in allowed:
-                out.append(
-                    Finding(
-                        "wf-row-vocabulary",
-                        "%s carries %s %r, outside its closed vocabulary"
-                        % (where, member, value),
-                    )
-                )
-
         attack = row.get("attackId")
         if attack in seen:
             # "uniqueness is enforced separately, before that comparison, not
