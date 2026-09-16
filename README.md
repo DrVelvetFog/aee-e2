@@ -25,6 +25,15 @@ reference Go reader in the corpus repository, `vectors/interpretation-decisions.
 `vectors/CHANGES.md`, `crosswalks/`, `DISPOSITIONS.md`. The manifest is read at scoring time,
 which is unavoidable; it is not read to tune behaviour beforehand.
 
+## Running the tests
+
+```
+python3 -m unittest discover -s tests -t .
+```
+
+No installation, no virtual environment, no third-party package. The modules
+import cleanly under `python3 -S`.
+
 ## Scored surface
 
 Per the corpus manifest's `comparisonSurface`: `verdict`, and on an accepted statement `result`,
