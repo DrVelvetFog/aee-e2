@@ -10,7 +10,8 @@
   "target": {
     "standard": "AEE reference verifier",
     "url": "https://github.com/astrogilda/agent-evidence-vectors",
-    "suite_revision": "adversarial-execution-evidence-conformance",
+    "suite": "adversarial-execution-evidence-conformance",
+    "suite_revision": 28,
     "corpus_digest": "8b035678def9e5ac00ba761b8c640e4412c57163134afb9d2c1a90f49d573a52",
     "spec_digest": "759d2383e5da36fa509dc335e6159a20b87641b25ebbadcf1676c55d75ffd8b0",
     "spec_upstream_commit": "0dbe10bcc959b63dc42370a5db09812c9476f59a"
@@ -35,6 +36,10 @@
     "index": {
       "path": "corpus/vectors/reject/INDEX.md",
       "sha256": "102b1773afd8697616ebea5197185c7b5656c4cb34fd8afcd50dc787cbef55f4"
+    },
+    "corpus_pin": {
+      "path": "spec/CORPUS-PIN.json",
+      "sha256": "e5d8becf04a71a39b61c70964ba58d6d536b6f462d741844963f4b10cef02278"
     }
   },
   "counts": {
