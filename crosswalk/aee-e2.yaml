@@ -1,7 +1,7 @@
 system: aee-e2
 system_url: https://github.com/DrVelvetFog/aee-e2
-crosswalk_version: "0.1.0"
-vocabulary_version_targeted: "0.2.0"
+crosswalk_version: "0.2.0"
+vocabulary_version_targeted: "0.3.0"
 
 maintainer:
   github: DrVelvetFog
@@ -87,8 +87,11 @@ posture_and_coverage:
 outcome_lattice:
   result:
     match: exact
-    evidence: inferred
+    evidence: recomputed
     source_path: https://raw.githubusercontent.com/DrVelvetFog/aee-e2/main/reports/after-resolution/first-run.json
+    corpus_digest: 8b035678def9e5ac00ba761b8c640e4412c57163134afb9d2c1a90f49d573a52
+    accepted_agreed: 61
+    accepted_total: 61
     notes: >
       The one term this rail does produce a value for. aee-e2 recomputes result
       from the carried predicate alone, as a minimum over three independent
@@ -97,8 +100,12 @@ outcome_lattice:
       outcomes or any consumer policy. The cited file carries got_result beside
       expected_result for all 272 vectors; the 61 accepted statements agreed on
       every one, across all four values, at the first run and after it.
-      Declared inferred and not emitted, because the value is computed here and
-      the file carrying it is a run report, not a signed statement.
+      Declared recomputed, the state 0.3.0 added for a verifier: the value is
+      computed here, and the file carrying it is a run report, not a signed
+      statement, so it is not emitted and promotes nothing. The corpus digest is
+      the one aee-e2 pins in spec/CORPUS-PIN.json (agent-evidence-vectors v0.10.1,
+      suiteRevision 28), and the 61 of 61 is the count of accepted vectors in the
+      cited file whose got_result equals expected_result.
 
 system_attributes:
   signature_capability: other
