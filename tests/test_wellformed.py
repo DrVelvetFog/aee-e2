@@ -193,7 +193,7 @@ class TestExpectedPayloads(unittest.TestCase):
 
 class TestRows(unittest.TestCase):
     def test_missing_required_member(self):
-        for member in ("attackId", "containmentObserved", "actualLayer"):
+        for member in ("attackId", "actualLayer"):
             r = f.row()
             del r[member]
             with self.subTest(member=member):
@@ -203,8 +203,9 @@ class TestRows(unittest.TestCase):
         # R1. basis, method and attribution are read by the recompute, so a
         # missing one makes the row contribute fail and leaves the statement
         # valid. Treating it as malformed is the actualLayer rule applied to
-        # the wrong members.
-        for member in ("basis", "method", "attribution"):
+        # the wrong members. suiteRevision 31 settled containmentObserved onto
+        # the same side (va8ff24a38152fc31 / vc6934681b519c0ce).
+        for member in ("basis", "method", "attribution", "containmentObserved"):
             r = f.row()
             del r[member]
             with self.subTest(member=member):

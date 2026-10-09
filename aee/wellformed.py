@@ -46,12 +46,12 @@ _ENVIRONMENT_MEMBERS = (
 # actualLayer is read by neither, so its absence is a malformed statement, not
 # weak evidence."
 #
-# `containmentObserved` is named in that same sentence and arguably belongs on
-# the same side of the line. It is left here because no vector in the pinned
-# corpus exercises the case, and the spec's own standard for an untested
-# reading is that it is "a candidate for the next vector, not a settled rule".
+# `containmentObserved` is named in that same sentence and belongs on the same
+# side of the line: suiteRevision 31 settled the reading (va8ff24a38152fc31 /
+# vc6934681b519c0ce) — an absent `containmentObserved` fail-closes through the
+# recompute like an out-of-vocabulary label; it is not a well-formedness fault.
 # See RESOLUTION.md R1.
-_ROW_MEMBERS = ("attackId", "containmentObserved", "actualLayer")
+_ROW_MEMBERS = ("attackId", "actualLayer")
 _HEX = set("0123456789abcdef")
 
 

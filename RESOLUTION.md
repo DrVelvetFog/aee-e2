@@ -394,4 +394,34 @@ spec leaves open. Three were omissions, one an altitude error, and one — R5 �
 was hidden behind another. None of the nine readings recorded in `NOTES.md`
 before the run has produced a divergence, and none has needed revising.
 
+## R16 — `containmentObserved` absence was still checked at the wrong altitude
+
+Worked 2026-10-09, against suiteRevision 31 (285 vectors). This repository
+still pins suiteRevision 28, and `tools/run_corpus.py`'s refusal of any other
+corpus is unchanged; the suiteRevision 31 runs were made off-repo with the same
+scoring (verdict always, `result` on accepts, codes measured). Before this
+entry: 284 / 285. After it: 285 / 285.
+
+**Vector (1, too strict).** `va8ff24a38152fc31` — `valid` with `result: fail`.
+An artifact row with `containmentObserved` omitted and the carried result
+`fail`. This implementation refused it with `wf-row-member`. Its twin
+`vc6934681b519c0ce` (the same statement carrying `pass`) already matched on
+verdict, but for the wrong reason: the well-formedness gate fired before the
+recompute mismatch could.
+
+**What the spec says.** The sentence R1 quotes: fail-closed-row semantics are
+reserved for members the recompute or the documented consumer gating reads
+(`containmentObserved`, `basis`, `method`). R1 moved `basis` and `method` to
+that side; `containmentObserved` stayed in `_ROW_MEMBERS` because no pinned
+vector exercised it, and the comment above the tuple said so — "a candidate for
+the next vector, not a settled rule". suiteRevision 31 is the next vector, and
+the settled-readings page now forces the reading by bytes: an absent
+`containmentObserved` fail-closes through the recompute exactly as an
+out-of-vocabulary label does; it is not a well-formedness fault.
+
+**Verdict on the divergence.** This implementation was wrong, in the direction
+its own comment predicted. The fix is the R1 fix applied to the member R1 left
+behind: `containmentObserved` comes out of `_ROW_MEMBERS`, and the recompute —
+which already fail-closes an absent label — carries both twins.
+
 [pr]: https://github.com/in-toto/attestation/pull/570
